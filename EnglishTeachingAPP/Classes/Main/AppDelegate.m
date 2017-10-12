@@ -19,8 +19,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [self showSelectVC];
+    [Bmob registerWithAppKey:@"c5587c76df76f4fa3c2d4a4a9c8b760d"];
     
+    BmobUser *bUser = [BmobUser currentUser];
+    if (bUser) {
+        //进行操作
+        [self showHomeVC];
+    }else{
+        //对象为空时，可打开用户注册界面
+        [self showSelectVC];
+    }
     
     return YES;
 }
@@ -31,6 +39,9 @@
     
     SelectViewController *selectVC = [SelectViewController new];
     self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:selectVC];
+
+    
+    
 }
 
 - (void)showHomeVC{

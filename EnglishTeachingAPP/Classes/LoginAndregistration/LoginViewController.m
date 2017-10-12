@@ -17,8 +17,14 @@
 
 @implementation LoginViewController
 - (IBAction)clicked:(id)sender {
-    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    [app showHomeVC];
+    [BmobUser loginInbackgroundWithAccount:self.nameTF.text andPassword:self.passwordTF.text block:^(BmobUser *user, NSError *error) {
+        if (user) {
+            AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+            [app showHomeVC];
+        }else{
+            NSLog(@"登录失败：%@", error);
+        }
+    }];
 }
 
 - (void)viewDidLoad {

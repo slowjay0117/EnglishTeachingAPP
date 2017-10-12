@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  EnglishTeachingAPP
+//
+//  Created by will on 2017/10/12.
+//  Copyright © 2017年 will. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <BmobSDK/Bmob.h>
+#import "AppDelegate.h"
+
+#endif /* PrefixHeader_pch */

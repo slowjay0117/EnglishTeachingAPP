@@ -86,6 +86,7 @@
         case 1:
             if (indexPath.row == 2) {
                 [app showSelectVC];
+                [BmobUser logout];
             }
             break;
     }
