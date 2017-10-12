@@ -16,5 +16,8 @@
 @property (nonatomic, strong) MainTabbarController *mainTabVC;
 @property (nonatomic, strong) LeftSlideViewController *leftSlideVC;
 
+
+- (void)showSelectVC;
+- (void)showHomeVC;
 @end
 

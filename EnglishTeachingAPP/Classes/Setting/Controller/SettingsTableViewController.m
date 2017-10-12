@@ -8,6 +8,7 @@
 
 #import "SettingsTableViewController.h"
 #import "SelectViewController.h"
+#import "AppDelegate.h"
 
 @interface SettingsTableViewController ()
 
@@ -77,14 +78,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    SelectViewController *selectVC = [SelectViewController new];
+    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
     switch (indexPath.section) {
         case 0:
             
             break;
         case 1:
             if (indexPath.row == 2) {
-                [self presentViewController:selectVC animated:YES completion:nil];
+                [app showSelectVC];
             }
             break;
     }

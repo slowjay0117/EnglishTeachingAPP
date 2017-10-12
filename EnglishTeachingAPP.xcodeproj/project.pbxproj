@@ -38,6 +38,7 @@
 		BE1D199B1F8F5A2100B4ABC4 /* SelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19991F8F5A2100B4ABC4 /* SelectViewController.xib */; };
 		BE1D19A21F8F5C5900B4ABC4 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19A01F8F5C5900B4ABC4 /* RegistrationViewController.m */; };
 		BE1D19A31F8F5C5900B4ABC4 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19A11F8F5C5900B4ABC4 /* RegistrationViewController.xib */; };
+		BE1D19A51F8F69F700B4ABC4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19A41F8F69F700B4ABC4 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		BE1D199F1F8F5C5900B4ABC4 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
 		BE1D19A01F8F5C5900B4ABC4 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
 		BE1D19A11F8F5C5900B4ABC4 /* RegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
+		BE1D19A41F8F69F700B4ABC4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		BE1D18C71F8F0CF300B4ABC4 = {
 			isa = PBXGroup;
 			children = (
+				BE1D19A41F8F69F700B4ABC4 /* Podfile */,
 				BE1D18D21F8F0CF300B4ABC4 /* EnglishTeachingAPP */,
 				BE1D18D11F8F0CF300B4ABC4 /* Products */,
 			);
@@ -575,6 +578,7 @@
 				BE1D18DE1F8F0CF300B4ABC4 /* Main.storyboard in Resources */,
 				BE1D19A31F8F5C5900B4ABC4 /* RegistrationViewController.xib in Resources */,
 				BE1D19721F8F487600B4ABC4 /* MessageTableViewController.xib in Resources */,
+				BE1D19A51F8F69F700B4ABC4 /* Podfile in Resources */,
 				BE1D198B1F8F490400B4ABC4 /* StudentTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

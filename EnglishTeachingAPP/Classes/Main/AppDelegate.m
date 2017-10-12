@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LeftViewController.h"
+#import "SelectViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [self showSelectVC];
+    
+    
+    return YES;
+}
+
+- (void)showSelectVC{
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyAndVisible];
+    
+    SelectViewController *selectVC = [SelectViewController new];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:selectVC];
+}
+
+- (void)showHomeVC{
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -30,9 +46,6 @@
     self.leftSlideVC = leftSlideVC;
     
     self.window.rootViewController = leftSlideVC;
-    
-    
-    return YES;
 }
 
 

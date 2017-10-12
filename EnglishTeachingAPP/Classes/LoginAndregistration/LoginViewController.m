@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "AppDelegate.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameTF;
@@ -16,11 +17,14 @@
 
 @implementation LoginViewController
 - (IBAction)clicked:(id)sender {
+    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [app showHomeVC];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"登录";
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

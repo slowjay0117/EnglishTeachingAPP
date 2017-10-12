@@ -15,21 +15,24 @@
 @end
 
 @implementation SelectViewController
-- (IBAction)clicked:(UIButton *)sender {
-    LoginViewController *lvc = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
-    RegistrationViewController *rvc = [RegistrationViewController new];
-    switch (sender.tag) {
-        case 0:
-            [self.navigationController pushViewController:lvc animated:YES];
-            break;
-        case 1:
-            [self.navigationController pushViewController:rvc animated:YES];
-    }
+- (IBAction)loginBtn:(id)sender {
+    LoginViewController *vc = [LoginViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)registrationBtn:(id)sender {
+    RegistrationViewController *vc = [RegistrationViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (void)didReceiveMemoryWarning {
