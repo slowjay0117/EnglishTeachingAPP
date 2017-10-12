@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainTabbarController.h
 //  EnglishTeachingAPP
 //
 //  Created by will on 2017/10/12.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MainTabbarController : UITabBarController
 
 @end
-
