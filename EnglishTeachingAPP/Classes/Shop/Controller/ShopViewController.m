@@ -1,22 +1,22 @@
 //
-//  MainTabbarController.m
+//  ShopViewController.m
 //  EnglishTeachingAPP
 //
 //  Created by will on 2017/10/12.
 //  Copyright © 2017年 will. All rights reserved.
 //
 
-#import "MainTabbarController.h"
+#import "ShopViewController.h"
 
-@interface MainTabbarController ()
+@interface ShopViewController ()
 
 @end
 
-@implementation MainTabbarController
+@implementation ShopViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

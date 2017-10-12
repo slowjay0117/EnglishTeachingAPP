@@ -11,8 +11,11 @@
 		BE1D18DE1F8F0CF300B4ABC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE1D18DC1F8F0CF300B4ABC4 /* Main.storyboard */; };
 		BE1D18E01F8F0CF300B4ABC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1D18DF1F8F0CF300B4ABC4 /* Assets.xcassets */; };
 		BE1D18E31F8F0CF300B4ABC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE1D18E11F8F0CF300B4ABC4 /* LaunchScreen.storyboard */; };
-		BE1D19121F8F100300B4ABC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D18F81F8F100300B4ABC4 /* AppDelegate.m */; };
-		BE1D19131F8F100300B4ABC4 /* MainTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D18FB1F8F100300B4ABC4 /* MainTabbarController.m */; };
+		BE1D193E1F8F111400B4ABC4 /* MainTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19271F8F111400B4ABC4 /* MainTabbarController.m */; };
+		BE1D19411F8F114500B4ABC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19401F8F114500B4ABC4 /* AppDelegate.m */; };
+		BE1D19441F8F115000B4ABC4 /* RankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19431F8F115000B4ABC4 /* RankViewController.m */; };
+		BE1D19471F8F115A00B4ABC4 /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19461F8F115A00B4ABC4 /* ShopViewController.m */; };
+		BE1D194A1F8F118100B4ABC4 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19491F8F118100B4ABC4 /* HomeTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +25,16 @@
 		BE1D18DF1F8F0CF300B4ABC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE1D18E21F8F0CF300B4ABC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE1D18E41F8F0CF300B4ABC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE1D18F71F8F100300B4ABC4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BE1D18F81F8F100300B4ABC4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BE1D18FA1F8F100300B4ABC4 /* MainTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabbarController.h; sourceTree = "<group>"; };
-		BE1D18FB1F8F100300B4ABC4 /* MainTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabbarController.m; sourceTree = "<group>"; };
+		BE1D19261F8F111400B4ABC4 /* MainTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabbarController.h; sourceTree = "<group>"; };
+		BE1D19271F8F111400B4ABC4 /* MainTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabbarController.m; sourceTree = "<group>"; };
+		BE1D193F1F8F114500B4ABC4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BE1D19401F8F114500B4ABC4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BE1D19421F8F115000B4ABC4 /* RankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankViewController.h; sourceTree = "<group>"; };
+		BE1D19431F8F115000B4ABC4 /* RankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankViewController.m; sourceTree = "<group>"; };
+		BE1D19451F8F115A00B4ABC4 /* ShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopViewController.h; sourceTree = "<group>"; };
+		BE1D19461F8F115A00B4ABC4 /* ShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopViewController.m; sourceTree = "<group>"; };
+		BE1D19481F8F118100B4ABC4 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		BE1D19491F8F118100B4ABC4 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +67,8 @@
 		BE1D18D21F8F0CF300B4ABC4 /* EnglishTeachingAPP */ = {
 			isa = PBXGroup;
 			children = (
+				BE1D191B1F8F111400B4ABC4 /* Classes */,
 				BE1D19141F8F101500B4ABC4 /* 3rdFrame */,
-				BE1D18ED1F8F100300B4ABC4 /* Classes */,
 				BE1D18D31F8F0CF300B4ABC4 /* Supporting Files */,
 			);
 			path = EnglishTeachingAPP;
@@ -77,278 +86,284 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BE1D18ED1F8F100300B4ABC4 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				BE1D18EE1F8F100300B4ABC4 /* FriendList */,
-				BE1D18F21F8F100300B4ABC4 /* GroupList */,
-				BE1D18F61F8F100300B4ABC4 /* Main */,
-				BE1D18FE1F8F100300B4ABC4 /* MessageList */,
-				BE1D19021F8F100300B4ABC4 /* RankingList */,
-				BE1D19061F8F100300B4ABC4 /* Setting */,
-				BE1D190A1F8F100300B4ABC4 /* Shop */,
-				BE1D190E1F8F100300B4ABC4 /* StudentList */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		BE1D18EE1F8F100300B4ABC4 /* FriendList */ = {
-			isa = PBXGroup;
-			children = (
-				BE1D18EF1F8F100300B4ABC4 /* Controller */,
-				BE1D18F01F8F100300B4ABC4 /* Model */,
-				BE1D18F11F8F100300B4ABC4 /* View */,
-			);
-			path = FriendList;
-			sourceTree = "<group>";
-		};
-		BE1D18EF1F8F100300B4ABC4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		BE1D18F01F8F100300B4ABC4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BE1D18F11F8F100300B4ABC4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BE1D18F21F8F100300B4ABC4 /* GroupList */ = {
-			isa = PBXGroup;
-			children = (
-				BE1D18F31F8F100300B4ABC4 /* Controller */,
-				BE1D18F41F8F100300B4ABC4 /* Model */,
-				BE1D18F51F8F100300B4ABC4 /* View */,
-			);
-			path = GroupList;
-			sourceTree = "<group>";
-		};
-		BE1D18F31F8F100300B4ABC4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		BE1D18F41F8F100300B4ABC4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BE1D18F51F8F100300B4ABC4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BE1D18F61F8F100300B4ABC4 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				BE1D18F71F8F100300B4ABC4 /* AppDelegate.h */,
-				BE1D18F81F8F100300B4ABC4 /* AppDelegate.m */,
-				BE1D18F91F8F100300B4ABC4 /* Controller */,
-				BE1D18FC1F8F100300B4ABC4 /* Model */,
-				BE1D18FD1F8F100300B4ABC4 /* View */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		BE1D18F91F8F100300B4ABC4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				BE1D18FA1F8F100300B4ABC4 /* MainTabbarController.h */,
-				BE1D18FB1F8F100300B4ABC4 /* MainTabbarController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		BE1D18FC1F8F100300B4ABC4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BE1D18FD1F8F100300B4ABC4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BE1D18FE1F8F100300B4ABC4 /* MessageList */ = {
-			isa = PBXGroup;
-			children = (
-				BE1D18FF1F8F100300B4ABC4 /* Controller */,
-				BE1D19001F8F100300B4ABC4 /* Model */,
-				BE1D19011F8F100300B4ABC4 /* View */,
-			);
-			path = MessageList;
-			sourceTree = "<group>";
-		};
-		BE1D18FF1F8F100300B4ABC4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		BE1D19001F8F100300B4ABC4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BE1D19011F8F100300B4ABC4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BE1D19021F8F100300B4ABC4 /* RankingList */ = {
-			isa = PBXGroup;
-			children = (
-				BE1D19031F8F100300B4ABC4 /* Controller */,
-				BE1D19041F8F100300B4ABC4 /* Model */,
-				BE1D19051F8F100300B4ABC4 /* View */,
-			);
-			path = RankingList;
-			sourceTree = "<group>";
-		};
-		BE1D19031F8F100300B4ABC4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		BE1D19041F8F100300B4ABC4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BE1D19051F8F100300B4ABC4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BE1D19061F8F100300B4ABC4 /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				BE1D19071F8F100300B4ABC4 /* Controller */,
-				BE1D19081F8F100300B4ABC4 /* Model */,
-				BE1D19091F8F100300B4ABC4 /* View */,
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
-		BE1D19071F8F100300B4ABC4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		BE1D19081F8F100300B4ABC4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BE1D19091F8F100300B4ABC4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BE1D190A1F8F100300B4ABC4 /* Shop */ = {
-			isa = PBXGroup;
-			children = (
-				BE1D190B1F8F100300B4ABC4 /* Controller */,
-				BE1D190C1F8F100300B4ABC4 /* Model */,
-				BE1D190D1F8F100300B4ABC4 /* View */,
-			);
-			path = Shop;
-			sourceTree = "<group>";
-		};
-		BE1D190B1F8F100300B4ABC4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		BE1D190C1F8F100300B4ABC4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BE1D190D1F8F100300B4ABC4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BE1D190E1F8F100300B4ABC4 /* StudentList */ = {
-			isa = PBXGroup;
-			children = (
-				BE1D190F1F8F100300B4ABC4 /* Controller */,
-				BE1D19101F8F100300B4ABC4 /* Model */,
-				BE1D19111F8F100300B4ABC4 /* View */,
-			);
-			path = StudentList;
-			sourceTree = "<group>";
-		};
-		BE1D190F1F8F100300B4ABC4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		BE1D19101F8F100300B4ABC4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BE1D19111F8F100300B4ABC4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		BE1D19141F8F101500B4ABC4 /* 3rdFrame */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = 3rdFrame;
+			sourceTree = "<group>";
+		};
+		BE1D191B1F8F111400B4ABC4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D191C1F8F111400B4ABC4 /* FriendList */,
+				BE1D19201F8F111400B4ABC4 /* GroupList */,
+				BE1D19241F8F111400B4ABC4 /* Main */,
+				BE1D192A1F8F111400B4ABC4 /* MessageList */,
+				BE1D192E1F8F111400B4ABC4 /* RankingList */,
+				BE1D19321F8F111400B4ABC4 /* Setting */,
+				BE1D19361F8F111400B4ABC4 /* Shop */,
+				BE1D193A1F8F111400B4ABC4 /* StudentList */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BE1D191C1F8F111400B4ABC4 /* FriendList */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D191D1F8F111400B4ABC4 /* Controller */,
+				BE1D191E1F8F111400B4ABC4 /* Model */,
+				BE1D191F1F8F111400B4ABC4 /* View */,
+			);
+			path = FriendList;
+			sourceTree = "<group>";
+		};
+		BE1D191D1F8F111400B4ABC4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE1D191E1F8F111400B4ABC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE1D191F1F8F111400B4ABC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE1D19201F8F111400B4ABC4 /* GroupList */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D19211F8F111400B4ABC4 /* Controller */,
+				BE1D19221F8F111400B4ABC4 /* Model */,
+				BE1D19231F8F111400B4ABC4 /* View */,
+			);
+			path = GroupList;
+			sourceTree = "<group>";
+		};
+		BE1D19211F8F111400B4ABC4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE1D19221F8F111400B4ABC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE1D19231F8F111400B4ABC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE1D19241F8F111400B4ABC4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D193F1F8F114500B4ABC4 /* AppDelegate.h */,
+				BE1D19401F8F114500B4ABC4 /* AppDelegate.m */,
+				BE1D19261F8F111400B4ABC4 /* MainTabbarController.h */,
+				BE1D19271F8F111400B4ABC4 /* MainTabbarController.m */,
+				BE1D19251F8F111400B4ABC4 /* Controller */,
+				BE1D19281F8F111400B4ABC4 /* Model */,
+				BE1D19291F8F111400B4ABC4 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BE1D19251F8F111400B4ABC4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D19481F8F118100B4ABC4 /* HomeTableViewController.h */,
+				BE1D19491F8F118100B4ABC4 /* HomeTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE1D19281F8F111400B4ABC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE1D19291F8F111400B4ABC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE1D192A1F8F111400B4ABC4 /* MessageList */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D192B1F8F111400B4ABC4 /* Controller */,
+				BE1D192C1F8F111400B4ABC4 /* Model */,
+				BE1D192D1F8F111400B4ABC4 /* View */,
+			);
+			path = MessageList;
+			sourceTree = "<group>";
+		};
+		BE1D192B1F8F111400B4ABC4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE1D192C1F8F111400B4ABC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE1D192D1F8F111400B4ABC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE1D192E1F8F111400B4ABC4 /* RankingList */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D192F1F8F111400B4ABC4 /* Controller */,
+				BE1D19301F8F111400B4ABC4 /* Model */,
+				BE1D19311F8F111400B4ABC4 /* View */,
+			);
+			path = RankingList;
+			sourceTree = "<group>";
+		};
+		BE1D192F1F8F111400B4ABC4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D19421F8F115000B4ABC4 /* RankViewController.h */,
+				BE1D19431F8F115000B4ABC4 /* RankViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE1D19301F8F111400B4ABC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE1D19311F8F111400B4ABC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE1D19321F8F111400B4ABC4 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D19331F8F111400B4ABC4 /* Controller */,
+				BE1D19341F8F111400B4ABC4 /* Model */,
+				BE1D19351F8F111400B4ABC4 /* View */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		BE1D19331F8F111400B4ABC4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE1D19341F8F111400B4ABC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE1D19351F8F111400B4ABC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE1D19361F8F111400B4ABC4 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D19371F8F111400B4ABC4 /* Controller */,
+				BE1D19381F8F111400B4ABC4 /* Model */,
+				BE1D19391F8F111400B4ABC4 /* View */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		BE1D19371F8F111400B4ABC4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D19451F8F115A00B4ABC4 /* ShopViewController.h */,
+				BE1D19461F8F115A00B4ABC4 /* ShopViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE1D19381F8F111400B4ABC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE1D19391F8F111400B4ABC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE1D193A1F8F111400B4ABC4 /* StudentList */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D193B1F8F111400B4ABC4 /* Controller */,
+				BE1D193C1F8F111400B4ABC4 /* Model */,
+				BE1D193D1F8F111400B4ABC4 /* View */,
+			);
+			path = StudentList;
+			sourceTree = "<group>";
+		};
+		BE1D193B1F8F111400B4ABC4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE1D193C1F8F111400B4ABC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE1D193D1F8F111400B4ABC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,9 +438,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE1D19131F8F100300B4ABC4 /* MainTabbarController.m in Sources */,
-				BE1D19121F8F100300B4ABC4 /* AppDelegate.m in Sources */,
+				BE1D193E1F8F111400B4ABC4 /* MainTabbarController.m in Sources */,
 				BE1D18D51F8F0CF300B4ABC4 /* main.m in Sources */,
+				BE1D19441F8F115000B4ABC4 /* RankViewController.m in Sources */,
+				BE1D19471F8F115A00B4ABC4 /* ShopViewController.m in Sources */,
+				BE1D194A1F8F118100B4ABC4 /* HomeTableViewController.m in Sources */,
+				BE1D19411F8F114500B4ABC4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
