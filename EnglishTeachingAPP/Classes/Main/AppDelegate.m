@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MainTabbarController.h"
+#import "LeftViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +23,14 @@
     [self.window makeKeyAndVisible];
     
     MainTabbarController *mainTabVC = [MainTabbarController new];
-    self.window.rootViewController = mainTabVC;
+    self.mainTabVC = mainTabVC;
+    LeftViewController *leftVC = [LeftViewController new];
+    
+    LeftSlideViewController *leftSlideVC = [[LeftSlideViewController alloc]initWithLeftView:leftVC andMainView:mainTabVC];
+    self.leftSlideVC = leftSlideVC;
+    
+    self.window.rootViewController = leftSlideVC;
+    
     
     return YES;
 }

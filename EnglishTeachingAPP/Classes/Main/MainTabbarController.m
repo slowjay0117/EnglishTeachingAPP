@@ -7,9 +7,16 @@
 //
 
 #import "MainTabbarController.h"
+#import "MainNaviController.h"
 #import "HomeTableViewController.h"
-#import "RankViewController.h"
+#import "RankingTableViewController.h"
 #import "ShopViewController.h"
+#import "MessageTableViewController.h"
+#import "SettingsTableViewController.h"
+#import "GroupsTableViewController.h"
+#import "FriendTableViewController.h"
+#import "StudentTableViewController.h"
+
 
 @interface MainTabbarController ()
 
@@ -19,15 +26,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIImageView *iv = [[UIImageView alloc]initWithFrame:self.view.bounds];
+    iv.image = [UIImage imageNamed:@"Bg"];
+    [self.view insertSubview:iv atIndex:0];
+    
     HomeTableViewController *hvc = [HomeTableViewController new];
-    RankViewController *rvc = [RankViewController new];
-    ShopViewController *svc = [ShopViewController new];
-    
     hvc.title = @"首页";
-    rvc.title = @"排行榜";
-    svc.title = @"商店";
+    MessageTableViewController *mvc = [MessageTableViewController new];
+    mvc.title = @"消息列表";
+    FriendTableViewController *fvc = [FriendTableViewController new];
+    fvc.title = @"好友列表";
+    SettingsTableViewController *svc = [SettingsTableViewController new];
+    svc.title = @"设置";
+    GroupsTableViewController *gvc = [GroupsTableViewController new];
+    gvc.title = @"班级列表";
+    StudentTableViewController *stuVC = [StudentTableViewController new];
+    stuVC.title = @"学生列表";
     
-    self.viewControllers = @[[[UINavigationController alloc]initWithRootViewController:hvc],[[UINavigationController alloc]initWithRootViewController:rvc],[[UINavigationController alloc]initWithRootViewController:svc]];
+    [self addChildViewController:[[MainNaviController alloc]initWithRootViewController:hvc]];
+    [self addChildViewController:[[MainNaviController alloc]initWithRootViewController:mvc]];
+    [self addChildViewController:[[MainNaviController alloc]initWithRootViewController:fvc]];
+    [self addChildViewController:[[MainNaviController alloc]initWithRootViewController:svc]];
+    [self addChildViewController:[[MainNaviController alloc]initWithRootViewController:gvc]];
+    [self addChildViewController:[[MainNaviController alloc]initWithRootViewController:stuVC]];
+    
+    self.tabBar.hidden = YES;
+    
 }
 
 - (void)didReceiveMemoryWarning {

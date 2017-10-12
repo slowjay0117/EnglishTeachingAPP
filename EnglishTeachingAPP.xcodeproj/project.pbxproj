@@ -9,32 +9,88 @@
 /* Begin PBXBuildFile section */
 		BE1D18D51F8F0CF300B4ABC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D18D41F8F0CF300B4ABC4 /* main.m */; };
 		BE1D18DE1F8F0CF300B4ABC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE1D18DC1F8F0CF300B4ABC4 /* Main.storyboard */; };
-		BE1D18E01F8F0CF300B4ABC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1D18DF1F8F0CF300B4ABC4 /* Assets.xcassets */; };
 		BE1D18E31F8F0CF300B4ABC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE1D18E11F8F0CF300B4ABC4 /* LaunchScreen.storyboard */; };
 		BE1D193E1F8F111400B4ABC4 /* MainTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19271F8F111400B4ABC4 /* MainTabbarController.m */; };
 		BE1D19411F8F114500B4ABC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19401F8F114500B4ABC4 /* AppDelegate.m */; };
-		BE1D19441F8F115000B4ABC4 /* RankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19431F8F115000B4ABC4 /* RankViewController.m */; };
 		BE1D19471F8F115A00B4ABC4 /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19461F8F115A00B4ABC4 /* ShopViewController.m */; };
 		BE1D194A1F8F118100B4ABC4 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19491F8F118100B4ABC4 /* HomeTableViewController.m */; };
+		BE1D19541F8F134D00B4ABC4 /* LeftSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19511F8F134D00B4ABC4 /* LeftSlideViewController.m */; };
+		BE1D19551F8F134D00B4ABC4 /* UIView_extra.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19531F8F134D00B4ABC4 /* UIView_extra.m */; };
+		BE1D19611F8F144D00B4ABC4 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D195F1F8F144D00B4ABC4 /* LeftViewController.m */; };
+		BE1D19621F8F144D00B4ABC4 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19601F8F144D00B4ABC4 /* LeftViewController.xib */; };
+		BE1D19641F8F3A9E00B4ABC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19631F8F3A9E00B4ABC4 /* Assets.xcassets */; };
+		BE1D196A1F8F476E00B4ABC4 /* MainNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19691F8F476E00B4ABC4 /* MainNaviController.m */; };
+		BE1D19711F8F487600B4ABC4 /* MessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D196F1F8F487600B4ABC4 /* MessageTableViewController.m */; };
+		BE1D19721F8F487600B4ABC4 /* MessageTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19701F8F487600B4ABC4 /* MessageTableViewController.xib */; };
+		BE1D19761F8F489800B4ABC4 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19741F8F489800B4ABC4 /* SettingsTableViewController.m */; };
+		BE1D19771F8F489800B4ABC4 /* SettingsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19751F8F489800B4ABC4 /* SettingsTableViewController.xib */; };
+		BE1D197B1F8F48B500B4ABC4 /* RankingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19791F8F48B500B4ABC4 /* RankingTableViewController.m */; };
+		BE1D197C1F8F48B500B4ABC4 /* RankingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D197A1F8F48B500B4ABC4 /* RankingTableViewController.xib */; };
+		BE1D19801F8F48D700B4ABC4 /* GroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D197E1F8F48D700B4ABC4 /* GroupsTableViewController.m */; };
+		BE1D19811F8F48D700B4ABC4 /* GroupsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D197F1F8F48D700B4ABC4 /* GroupsTableViewController.xib */; };
+		BE1D19851F8F48E800B4ABC4 /* FriendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19831F8F48E800B4ABC4 /* FriendTableViewController.m */; };
+		BE1D19861F8F48E800B4ABC4 /* FriendTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19841F8F48E800B4ABC4 /* FriendTableViewController.xib */; };
+		BE1D198A1F8F490400B4ABC4 /* StudentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19881F8F490400B4ABC4 /* StudentTableViewController.m */; };
+		BE1D198B1F8F490400B4ABC4 /* StudentTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19891F8F490400B4ABC4 /* StudentTableViewController.xib */; };
+		BE1D19951F8F59D800B4ABC4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19931F8F59D800B4ABC4 /* LoginViewController.m */; };
+		BE1D19961F8F59D800B4ABC4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19941F8F59D800B4ABC4 /* LoginViewController.xib */; };
+		BE1D199A1F8F5A2100B4ABC4 /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19981F8F5A2100B4ABC4 /* SelectViewController.m */; };
+		BE1D199B1F8F5A2100B4ABC4 /* SelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19991F8F5A2100B4ABC4 /* SelectViewController.xib */; };
+		BE1D19A21F8F5C5900B4ABC4 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19A01F8F5C5900B4ABC4 /* RegistrationViewController.m */; };
+		BE1D19A31F8F5C5900B4ABC4 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19A11F8F5C5900B4ABC4 /* RegistrationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BE1D18D01F8F0CF300B4ABC4 /* EnglishTeachingAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishTeachingAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE1D18D41F8F0CF300B4ABC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BE1D18DD1F8F0CF300B4ABC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BE1D18DF1F8F0CF300B4ABC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE1D18E21F8F0CF300B4ABC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE1D18E41F8F0CF300B4ABC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE1D19261F8F111400B4ABC4 /* MainTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabbarController.h; sourceTree = "<group>"; };
 		BE1D19271F8F111400B4ABC4 /* MainTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabbarController.m; sourceTree = "<group>"; };
 		BE1D193F1F8F114500B4ABC4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BE1D19401F8F114500B4ABC4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BE1D19421F8F115000B4ABC4 /* RankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankViewController.h; sourceTree = "<group>"; };
-		BE1D19431F8F115000B4ABC4 /* RankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankViewController.m; sourceTree = "<group>"; };
 		BE1D19451F8F115A00B4ABC4 /* ShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopViewController.h; sourceTree = "<group>"; };
 		BE1D19461F8F115A00B4ABC4 /* ShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopViewController.m; sourceTree = "<group>"; };
 		BE1D19481F8F118100B4ABC4 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
 		BE1D19491F8F118100B4ABC4 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
+		BE1D19501F8F134D00B4ABC4 /* LeftSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSlideViewController.h; sourceTree = "<group>"; };
+		BE1D19511F8F134D00B4ABC4 /* LeftSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSlideViewController.m; sourceTree = "<group>"; };
+		BE1D19521F8F134D00B4ABC4 /* UIView_extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_extra.h; sourceTree = "<group>"; };
+		BE1D19531F8F134D00B4ABC4 /* UIView_extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView_extra.m; sourceTree = "<group>"; };
+		BE1D195E1F8F144D00B4ABC4 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		BE1D195F1F8F144D00B4ABC4 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		BE1D19601F8F144D00B4ABC4 /* LeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftViewController.xib; sourceTree = "<group>"; };
+		BE1D19631F8F3A9E00B4ABC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE1D19681F8F476E00B4ABC4 /* MainNaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNaviController.h; sourceTree = "<group>"; };
+		BE1D19691F8F476E00B4ABC4 /* MainNaviController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNaviController.m; sourceTree = "<group>"; };
+		BE1D196E1F8F487600B4ABC4 /* MessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewController.h; sourceTree = "<group>"; };
+		BE1D196F1F8F487600B4ABC4 /* MessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewController.m; sourceTree = "<group>"; };
+		BE1D19701F8F487600B4ABC4 /* MessageTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewController.xib; sourceTree = "<group>"; };
+		BE1D19731F8F489800B4ABC4 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		BE1D19741F8F489800B4ABC4 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		BE1D19751F8F489800B4ABC4 /* SettingsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsTableViewController.xib; sourceTree = "<group>"; };
+		BE1D19781F8F48B500B4ABC4 /* RankingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingTableViewController.h; sourceTree = "<group>"; };
+		BE1D19791F8F48B500B4ABC4 /* RankingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingTableViewController.m; sourceTree = "<group>"; };
+		BE1D197A1F8F48B500B4ABC4 /* RankingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankingTableViewController.xib; sourceTree = "<group>"; };
+		BE1D197D1F8F48D700B4ABC4 /* GroupsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupsTableViewController.h; sourceTree = "<group>"; };
+		BE1D197E1F8F48D700B4ABC4 /* GroupsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupsTableViewController.m; sourceTree = "<group>"; };
+		BE1D197F1F8F48D700B4ABC4 /* GroupsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupsTableViewController.xib; sourceTree = "<group>"; };
+		BE1D19821F8F48E800B4ABC4 /* FriendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTableViewController.h; sourceTree = "<group>"; };
+		BE1D19831F8F48E800B4ABC4 /* FriendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableViewController.m; sourceTree = "<group>"; };
+		BE1D19841F8F48E800B4ABC4 /* FriendTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendTableViewController.xib; sourceTree = "<group>"; };
+		BE1D19871F8F490400B4ABC4 /* StudentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentTableViewController.h; sourceTree = "<group>"; };
+		BE1D19881F8F490400B4ABC4 /* StudentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentTableViewController.m; sourceTree = "<group>"; };
+		BE1D19891F8F490400B4ABC4 /* StudentTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentTableViewController.xib; sourceTree = "<group>"; };
+		BE1D19921F8F59D800B4ABC4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		BE1D19931F8F59D800B4ABC4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		BE1D19941F8F59D800B4ABC4 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		BE1D19971F8F5A2100B4ABC4 /* SelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectViewController.h; sourceTree = "<group>"; };
+		BE1D19981F8F5A2100B4ABC4 /* SelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectViewController.m; sourceTree = "<group>"; };
+		BE1D19991F8F5A2100B4ABC4 /* SelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectViewController.xib; sourceTree = "<group>"; };
+		BE1D199F1F8F5C5900B4ABC4 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		BE1D19A01F8F5C5900B4ABC4 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		BE1D19A11F8F5C5900B4ABC4 /* RegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +133,8 @@
 		BE1D18D31F8F0CF300B4ABC4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BE1D19631F8F3A9E00B4ABC4 /* Assets.xcassets */,
 				BE1D18DC1F8F0CF300B4ABC4 /* Main.storyboard */,
-				BE1D18DF1F8F0CF300B4ABC4 /* Assets.xcassets */,
 				BE1D18E11F8F0CF300B4ABC4 /* LaunchScreen.storyboard */,
 				BE1D18E41F8F0CF300B4ABC4 /* Info.plist */,
 				BE1D18D41F8F0CF300B4ABC4 /* main.m */,
@@ -89,6 +145,7 @@
 		BE1D19141F8F101500B4ABC4 /* 3rdFrame */ = {
 			isa = PBXGroup;
 			children = (
+				BE1D194F1F8F134D00B4ABC4 /* LeftSlideViewController */,
 			);
 			path = 3rdFrame;
 			sourceTree = "<group>";
@@ -96,6 +153,8 @@
 		BE1D191B1F8F111400B4ABC4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BE1D19911F8F59D800B4ABC4 /* LoginAndregistration */,
+				BE1D194B1F8F132700B4ABC4 /* LeftSlide */,
 				BE1D191C1F8F111400B4ABC4 /* FriendList */,
 				BE1D19201F8F111400B4ABC4 /* GroupList */,
 				BE1D19241F8F111400B4ABC4 /* Main */,
@@ -121,6 +180,9 @@
 		BE1D191D1F8F111400B4ABC4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BE1D19821F8F48E800B4ABC4 /* FriendTableViewController.h */,
+				BE1D19831F8F48E800B4ABC4 /* FriendTableViewController.m */,
+				BE1D19841F8F48E800B4ABC4 /* FriendTableViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -152,6 +214,9 @@
 		BE1D19211F8F111400B4ABC4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BE1D197D1F8F48D700B4ABC4 /* GroupsTableViewController.h */,
+				BE1D197E1F8F48D700B4ABC4 /* GroupsTableViewController.m */,
+				BE1D197F1F8F48D700B4ABC4 /* GroupsTableViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -177,6 +242,8 @@
 				BE1D19401F8F114500B4ABC4 /* AppDelegate.m */,
 				BE1D19261F8F111400B4ABC4 /* MainTabbarController.h */,
 				BE1D19271F8F111400B4ABC4 /* MainTabbarController.m */,
+				BE1D19681F8F476E00B4ABC4 /* MainNaviController.h */,
+				BE1D19691F8F476E00B4ABC4 /* MainNaviController.m */,
 				BE1D19251F8F111400B4ABC4 /* Controller */,
 				BE1D19281F8F111400B4ABC4 /* Model */,
 				BE1D19291F8F111400B4ABC4 /* View */,
@@ -220,6 +287,9 @@
 		BE1D192B1F8F111400B4ABC4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BE1D196E1F8F487600B4ABC4 /* MessageTableViewController.h */,
+				BE1D196F1F8F487600B4ABC4 /* MessageTableViewController.m */,
+				BE1D19701F8F487600B4ABC4 /* MessageTableViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -251,8 +321,9 @@
 		BE1D192F1F8F111400B4ABC4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BE1D19421F8F115000B4ABC4 /* RankViewController.h */,
-				BE1D19431F8F115000B4ABC4 /* RankViewController.m */,
+				BE1D19781F8F48B500B4ABC4 /* RankingTableViewController.h */,
+				BE1D19791F8F48B500B4ABC4 /* RankingTableViewController.m */,
+				BE1D197A1F8F48B500B4ABC4 /* RankingTableViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -284,6 +355,9 @@
 		BE1D19331F8F111400B4ABC4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BE1D19731F8F489800B4ABC4 /* SettingsTableViewController.h */,
+				BE1D19741F8F489800B4ABC4 /* SettingsTableViewController.m */,
+				BE1D19751F8F489800B4ABC4 /* SettingsTableViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -348,6 +422,9 @@
 		BE1D193B1F8F111400B4ABC4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BE1D19871F8F490400B4ABC4 /* StudentTableViewController.h */,
+				BE1D19881F8F490400B4ABC4 /* StudentTableViewController.m */,
+				BE1D19891F8F490400B4ABC4 /* StudentTableViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -364,6 +441,67 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BE1D194B1F8F132700B4ABC4 /* LeftSlide */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D194C1F8F132700B4ABC4 /* Controller */,
+				BE1D194D1F8F132700B4ABC4 /* Model */,
+				BE1D194E1F8F132700B4ABC4 /* View */,
+			);
+			path = LeftSlide;
+			sourceTree = "<group>";
+		};
+		BE1D194C1F8F132700B4ABC4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D195E1F8F144D00B4ABC4 /* LeftViewController.h */,
+				BE1D195F1F8F144D00B4ABC4 /* LeftViewController.m */,
+				BE1D19601F8F144D00B4ABC4 /* LeftViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE1D194D1F8F132700B4ABC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE1D194E1F8F132700B4ABC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE1D194F1F8F134D00B4ABC4 /* LeftSlideViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D19501F8F134D00B4ABC4 /* LeftSlideViewController.h */,
+				BE1D19511F8F134D00B4ABC4 /* LeftSlideViewController.m */,
+				BE1D19521F8F134D00B4ABC4 /* UIView_extra.h */,
+				BE1D19531F8F134D00B4ABC4 /* UIView_extra.m */,
+			);
+			path = LeftSlideViewController;
+			sourceTree = "<group>";
+		};
+		BE1D19911F8F59D800B4ABC4 /* LoginAndregistration */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D19921F8F59D800B4ABC4 /* LoginViewController.h */,
+				BE1D19931F8F59D800B4ABC4 /* LoginViewController.m */,
+				BE1D19941F8F59D800B4ABC4 /* LoginViewController.xib */,
+				BE1D19971F8F5A2100B4ABC4 /* SelectViewController.h */,
+				BE1D19981F8F5A2100B4ABC4 /* SelectViewController.m */,
+				BE1D19991F8F5A2100B4ABC4 /* SelectViewController.xib */,
+				BE1D199F1F8F5C5900B4ABC4 /* RegistrationViewController.h */,
+				BE1D19A01F8F5C5900B4ABC4 /* RegistrationViewController.m */,
+				BE1D19A11F8F5C5900B4ABC4 /* RegistrationViewController.xib */,
+			);
+			path = LoginAndregistration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,9 +563,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1D19771F8F489800B4ABC4 /* SettingsTableViewController.xib in Resources */,
 				BE1D18E31F8F0CF300B4ABC4 /* LaunchScreen.storyboard in Resources */,
-				BE1D18E01F8F0CF300B4ABC4 /* Assets.xcassets in Resources */,
+				BE1D19961F8F59D800B4ABC4 /* LoginViewController.xib in Resources */,
+				BE1D19621F8F144D00B4ABC4 /* LeftViewController.xib in Resources */,
+				BE1D199B1F8F5A2100B4ABC4 /* SelectViewController.xib in Resources */,
+				BE1D197C1F8F48B500B4ABC4 /* RankingTableViewController.xib in Resources */,
+				BE1D19641F8F3A9E00B4ABC4 /* Assets.xcassets in Resources */,
+				BE1D19811F8F48D700B4ABC4 /* GroupsTableViewController.xib in Resources */,
+				BE1D19861F8F48E800B4ABC4 /* FriendTableViewController.xib in Resources */,
 				BE1D18DE1F8F0CF300B4ABC4 /* Main.storyboard in Resources */,
+				BE1D19A31F8F5C5900B4ABC4 /* RegistrationViewController.xib in Resources */,
+				BE1D19721F8F487600B4ABC4 /* MessageTableViewController.xib in Resources */,
+				BE1D198B1F8F490400B4ABC4 /* StudentTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,10 +586,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1D19761F8F489800B4ABC4 /* SettingsTableViewController.m in Sources */,
+				BE1D19611F8F144D00B4ABC4 /* LeftViewController.m in Sources */,
+				BE1D19711F8F487600B4ABC4 /* MessageTableViewController.m in Sources */,
 				BE1D193E1F8F111400B4ABC4 /* MainTabbarController.m in Sources */,
+				BE1D199A1F8F5A2100B4ABC4 /* SelectViewController.m in Sources */,
+				BE1D198A1F8F490400B4ABC4 /* StudentTableViewController.m in Sources */,
+				BE1D197B1F8F48B500B4ABC4 /* RankingTableViewController.m in Sources */,
+				BE1D19A21F8F5C5900B4ABC4 /* RegistrationViewController.m in Sources */,
+				BE1D196A1F8F476E00B4ABC4 /* MainNaviController.m in Sources */,
+				BE1D19541F8F134D00B4ABC4 /* LeftSlideViewController.m in Sources */,
+				BE1D19951F8F59D800B4ABC4 /* LoginViewController.m in Sources */,
 				BE1D18D51F8F0CF300B4ABC4 /* main.m in Sources */,
-				BE1D19441F8F115000B4ABC4 /* RankViewController.m in Sources */,
+				BE1D19801F8F48D700B4ABC4 /* GroupsTableViewController.m in Sources */,
+				BE1D19851F8F48E800B4ABC4 /* FriendTableViewController.m in Sources */,
 				BE1D19471F8F115A00B4ABC4 /* ShopViewController.m in Sources */,
+				BE1D19551F8F134D00B4ABC4 /* UIView_extra.m in Sources */,
 				BE1D194A1F8F118100B4ABC4 /* HomeTableViewController.m in Sources */,
 				BE1D19411F8F114500B4ABC4 /* AppDelegate.m in Sources */,
 			);
@@ -604,6 +764,7 @@
 				BE1D18E91F8F0CF300B4ABC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

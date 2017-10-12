@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LeftSlideViewController.h"
 
 @interface HomeTableViewController : UITableViewController
-
+@property (nonatomic, strong) LeftSlideViewController *leftSlideVC;
 @end

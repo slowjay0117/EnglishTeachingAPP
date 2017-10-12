@@ -1,18 +1,18 @@
 //
-//  RankViewController.m
+//  MainNaviController.m
 //  EnglishTeachingAPP
 //
 //  Created by will on 2017/10/12.
 //  Copyright © 2017年 will. All rights reserved.
 //
 
-#import "RankViewController.h"
+#import "MainNaviController.h"
 
-@interface RankViewController ()
+@interface MainNaviController ()
 
 @end
 
-@implementation RankViewController
+@implementation MainNaviController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -1,5 +1,5 @@
 //
-//  RankViewController.h
+//  SelectViewController.h
 //  EnglishTeachingAPP
 //
 //  Created by will on 2017/10/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RankViewController : UIViewController
+@interface SelectViewController : UIViewController
 
 @end

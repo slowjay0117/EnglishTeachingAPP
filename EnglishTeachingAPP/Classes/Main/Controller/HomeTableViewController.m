@@ -7,6 +7,7 @@
 //
 
 #import "HomeTableViewController.h"
+#import "AppDelegate.h"
 
 @interface HomeTableViewController ()
 
@@ -22,7 +23,14 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(clickedAction)];
 }
+
+//- (void)clickedAction{
+//    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//    app 
+    
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
