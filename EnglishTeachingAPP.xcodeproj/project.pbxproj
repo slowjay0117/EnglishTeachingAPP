@@ -182,6 +182,8 @@
 		BE1D191B1F8F111400B4ABC4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BE1D19A71F90599B00B4ABC4 /* Teacher */,
+				BE1D19AB1F90599B00B4ABC4 /* User */,
 				BE1D19911F8F59D800B4ABC4 /* LoginAndregistration */,
 				BE1D194B1F8F132700B4ABC4 /* LeftSlide */,
 				BE1D191C1F8F111400B4ABC4 /* FriendList */,
@@ -273,6 +275,7 @@
 				BE1D19271F8F111400B4ABC4 /* MainTabbarController.m */,
 				BE1D19681F8F476E00B4ABC4 /* MainNaviController.h */,
 				BE1D19691F8F476E00B4ABC4 /* MainNaviController.m */,
+				BE1D19AF1F9059B700B4ABC4 /* Utlis */,
 				BE1D19251F8F111400B4ABC4 /* Controller */,
 				BE1D19281F8F111400B4ABC4 /* Model */,
 				BE1D19291F8F111400B4ABC4 /* View */,
@@ -531,6 +534,75 @@
 				BE1D19A11F8F5C5900B4ABC4 /* RegistrationViewController.xib */,
 			);
 			path = LoginAndregistration;
+			sourceTree = "<group>";
+		};
+		BE1D19A71F90599B00B4ABC4 /* Teacher */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D19A81F90599B00B4ABC4 /* Controller */,
+				BE1D19A91F90599B00B4ABC4 /* Model */,
+				BE1D19AA1F90599B00B4ABC4 /* View */,
+			);
+			path = Teacher;
+			sourceTree = "<group>";
+		};
+		BE1D19A81F90599B00B4ABC4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE1D19A91F90599B00B4ABC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE1D19AA1F90599B00B4ABC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE1D19AB1F90599B00B4ABC4 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D19AC1F90599B00B4ABC4 /* Controller */,
+				BE1D19AD1F90599B00B4ABC4 /* Model */,
+				BE1D19AE1F90599B00B4ABC4 /* View */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		BE1D19AC1F90599B00B4ABC4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE1D19AD1F90599B00B4ABC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE1D19AE1F90599B00B4ABC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE1D19AF1F9059B700B4ABC4 /* Utlis */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utlis;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
