@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GroupsTableViewController : UITableViewController
+@interface GroupsTableViewController : MainTableViewController
 
 @end

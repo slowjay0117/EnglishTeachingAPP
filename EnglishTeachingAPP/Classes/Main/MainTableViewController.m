@@ -1,28 +1,28 @@
 //
-//  HomeTableViewController.m
+//  MainTableViewController.m
 //  EnglishTeachingAPP
 //
-//  Created by will on 2017/10/12.
+//  Created by will on 2017/10/13.
 //  Copyright © 2017年 will. All rights reserved.
 //
 
-#import "HomeTableViewController.h"
-#import "AppDelegate.h"
+#import "MainTableViewController.h"
 
-@interface HomeTableViewController ()
+@interface MainTableViewController ()
 
 @end
 
-@implementation HomeTableViewController
+@implementation MainTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStyleDone target:self action:@selector(menuAction)];
+}
+
+- (void)menuAction{
+    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [app.leftSlideVC openLeftView];
 }
 
 - (void)didReceiveMemoryWarning {

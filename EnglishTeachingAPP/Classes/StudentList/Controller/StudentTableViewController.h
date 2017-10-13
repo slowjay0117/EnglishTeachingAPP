@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StudentTableViewController : UITableViewController
+@interface StudentTableViewController : MainTableViewController
 
 @end

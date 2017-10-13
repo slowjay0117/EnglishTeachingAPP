@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RankingTableViewController : UITableViewController
+@interface RankingTableViewController : MainTableViewController
 
 @end

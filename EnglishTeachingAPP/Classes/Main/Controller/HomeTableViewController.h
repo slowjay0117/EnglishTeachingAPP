@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "LeftSlideViewController.h"
 
-@interface HomeTableViewController : UITableViewController
+@interface HomeTableViewController : MainTableViewController
 @property (nonatomic, strong) LeftSlideViewController *leftSlideVC;
 @end

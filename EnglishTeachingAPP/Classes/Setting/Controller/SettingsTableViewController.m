@@ -8,7 +8,7 @@
 
 #import "SettingsTableViewController.h"
 #import "WelcomeViewController.h"
-#import "AppDelegate.h"
+#import "SettingInfoViewController.h"
 
 @interface SettingsTableViewController ()
 
@@ -84,6 +84,12 @@
             
             break;
         case 1:
+            if (indexPath.row == 0 || indexPath.row == 1) {
+                SettingInfoViewController *settingInfoVC = [SettingInfoViewController new];
+                settingInfoVC.rowNumber = indexPath.row;
+                [self presentViewController:settingInfoVC animated:YES completion:nil];
+            }
+            
             if (indexPath.row == 2) {
                 UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否需要切换用户并重新登录" preferredStyle:UIAlertControllerStyleAlert];
                 

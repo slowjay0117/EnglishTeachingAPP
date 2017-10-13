@@ -11,5 +11,6 @@
 
 #import <BmobSDK/Bmob.h>
 #import "AppDelegate.h"
+#import "MainTableViewController.h"
 
 #endif /* PrefixHeader_pch */

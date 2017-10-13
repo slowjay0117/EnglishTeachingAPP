@@ -40,6 +40,9 @@
 		BE1D19A21F8F5C5900B4ABC4 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19A01F8F5C5900B4ABC4 /* RegistrationViewController.m */; };
 		BE1D19A31F8F5C5900B4ABC4 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19A11F8F5C5900B4ABC4 /* RegistrationViewController.xib */; };
 		BE1D19A51F8F69F700B4ABC4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19A41F8F69F700B4ABC4 /* Podfile */; };
+		BE1D19B31F905F9E00B4ABC4 /* SettingInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19B11F905F9E00B4ABC4 /* SettingInfoViewController.m */; };
+		BE1D19B41F905F9E00B4ABC4 /* SettingInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19B21F905F9E00B4ABC4 /* SettingInfoViewController.xib */; };
+		BE1D19B71F90663A00B4ABC4 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19B61F90663A00B4ABC4 /* MainTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +100,11 @@
 		BE1D19A11F8F5C5900B4ABC4 /* RegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		BE1D19A41F8F69F700B4ABC4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		BE1D19A61F8F6B7400B4ABC4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		BE1D19B01F905F9E00B4ABC4 /* SettingInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingInfoViewController.h; sourceTree = "<group>"; };
+		BE1D19B11F905F9E00B4ABC4 /* SettingInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingInfoViewController.m; sourceTree = "<group>"; };
+		BE1D19B21F905F9E00B4ABC4 /* SettingInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingInfoViewController.xib; sourceTree = "<group>"; };
+		BE1D19B51F90663A00B4ABC4 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		BE1D19B61F90663A00B4ABC4 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		C6D8B0DAF0A971604AE50D80 /* libPods-EnglishTeachingAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EnglishTeachingAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -275,6 +283,8 @@
 				BE1D19271F8F111400B4ABC4 /* MainTabbarController.m */,
 				BE1D19681F8F476E00B4ABC4 /* MainNaviController.h */,
 				BE1D19691F8F476E00B4ABC4 /* MainNaviController.m */,
+				BE1D19B51F90663A00B4ABC4 /* MainTableViewController.h */,
+				BE1D19B61F90663A00B4ABC4 /* MainTableViewController.m */,
 				BE1D19AF1F9059B700B4ABC4 /* Utlis */,
 				BE1D19251F8F111400B4ABC4 /* Controller */,
 				BE1D19281F8F111400B4ABC4 /* Model */,
@@ -390,6 +400,9 @@
 				BE1D19731F8F489800B4ABC4 /* SettingsTableViewController.h */,
 				BE1D19741F8F489800B4ABC4 /* SettingsTableViewController.m */,
 				BE1D19751F8F489800B4ABC4 /* SettingsTableViewController.xib */,
+				BE1D19B01F905F9E00B4ABC4 /* SettingInfoViewController.h */,
+				BE1D19B11F905F9E00B4ABC4 /* SettingInfoViewController.m */,
+				BE1D19B21F905F9E00B4ABC4 /* SettingInfoViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -674,6 +687,7 @@
 				BE1D199B1F8F5A2100B4ABC4 /* WelcomeViewController.xib in Resources */,
 				BE1D197C1F8F48B500B4ABC4 /* RankingTableViewController.xib in Resources */,
 				BE1D19641F8F3A9E00B4ABC4 /* Assets.xcassets in Resources */,
+				BE1D19B41F905F9E00B4ABC4 /* SettingInfoViewController.xib in Resources */,
 				BE1D19811F8F48D700B4ABC4 /* GroupsTableViewController.xib in Resources */,
 				BE1D19861F8F48E800B4ABC4 /* FriendTableViewController.xib in Resources */,
 				BE1D18DE1F8F0CF300B4ABC4 /* Main.storyboard in Resources */,
@@ -750,9 +764,11 @@
 				BE1D198A1F8F490400B4ABC4 /* StudentTableViewController.m in Sources */,
 				BE1D197B1F8F48B500B4ABC4 /* RankingTableViewController.m in Sources */,
 				BE1D19A21F8F5C5900B4ABC4 /* RegistrationViewController.m in Sources */,
+				BE1D19B71F90663A00B4ABC4 /* MainTableViewController.m in Sources */,
 				BE1D196A1F8F476E00B4ABC4 /* MainNaviController.m in Sources */,
 				BE1D19541F8F134D00B4ABC4 /* LeftSlideViewController.m in Sources */,
 				BE1D19951F8F59D800B4ABC4 /* LoginViewController.m in Sources */,
+				BE1D19B31F905F9E00B4ABC4 /* SettingInfoViewController.m in Sources */,
 				BE1D18D51F8F0CF300B4ABC4 /* main.m in Sources */,
 				BE1D19801F8F48D700B4ABC4 /* GroupsTableViewController.m in Sources */,
 				BE1D19851F8F48E800B4ABC4 /* FriendTableViewController.m in Sources */,
