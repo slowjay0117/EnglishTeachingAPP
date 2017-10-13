@@ -6,15 +6,17 @@
 //  Copyright © 2017年 will. All rights reserved.
 //
 
-#import "SelectViewController.h"
+#import "WelcomeViewController.h"
 #import "LoginViewController.h"
 #import "RegistrationViewController.h"
 
-@interface SelectViewController ()
+@interface WelcomeViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+@property (weak, nonatomic) IBOutlet UIButton *registrationBtn;
 
 @end
 
-@implementation SelectViewController
+@implementation WelcomeViewController
 - (IBAction)loginBtn:(id)sender {
     LoginViewController *vc = [LoginViewController new];
     [self.navigationController pushViewController:vc animated:YES];
@@ -32,6 +34,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //设置按钮的样式为圆角，有边框
+    self.registrationBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.registrationBtn.layer.borderWidth = 1;
+    self.registrationBtn.layer.cornerRadius = self.loginBtn.layer.cornerRadius= self.registrationBtn.bounds.size.height/2;
+    self.registrationBtn.layer.masksToBounds = self.loginBtn.layer.masksToBounds = YES;
     
 }
 

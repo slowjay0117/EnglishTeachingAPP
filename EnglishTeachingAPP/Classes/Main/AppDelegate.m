@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LeftViewController.h"
-#import "SelectViewController.h"
+#import "WelcomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -37,8 +37,8 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     
-    SelectViewController *selectVC = [SelectViewController new];
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:selectVC];
+    WelcomeViewController *welcomeVC = [WelcomeViewController new];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:welcomeVC];
 
     
     

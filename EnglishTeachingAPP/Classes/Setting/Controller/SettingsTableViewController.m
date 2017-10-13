@@ -7,7 +7,7 @@
 //
 
 #import "SettingsTableViewController.h"
-#import "SelectViewController.h"
+#import "WelcomeViewController.h"
 #import "AppDelegate.h"
 
 @interface SettingsTableViewController ()
@@ -85,8 +85,18 @@
             break;
         case 1:
             if (indexPath.row == 2) {
-                [app showSelectVC];
-                [BmobUser logout];
+                UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否需要切换用户并重新登录" preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction *actionYes = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    [app showSelectVC];
+                    [BmobUser logout];
+                }];
+                UIAlertAction *actionNo = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+                
+                [ac addAction:actionYes];
+                [ac addAction:actionNo];
+                
+                [self presentViewController:ac animated:YES completion:nil];
             }
             break;
     }

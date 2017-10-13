@@ -35,8 +35,8 @@
 		BE1D198B1F8F490400B4ABC4 /* StudentTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19891F8F490400B4ABC4 /* StudentTableViewController.xib */; };
 		BE1D19951F8F59D800B4ABC4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19931F8F59D800B4ABC4 /* LoginViewController.m */; };
 		BE1D19961F8F59D800B4ABC4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19941F8F59D800B4ABC4 /* LoginViewController.xib */; };
-		BE1D199A1F8F5A2100B4ABC4 /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19981F8F5A2100B4ABC4 /* SelectViewController.m */; };
-		BE1D199B1F8F5A2100B4ABC4 /* SelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19991F8F5A2100B4ABC4 /* SelectViewController.xib */; };
+		BE1D199A1F8F5A2100B4ABC4 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19981F8F5A2100B4ABC4 /* WelcomeViewController.m */; };
+		BE1D199B1F8F5A2100B4ABC4 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19991F8F5A2100B4ABC4 /* WelcomeViewController.xib */; };
 		BE1D19A21F8F5C5900B4ABC4 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D19A01F8F5C5900B4ABC4 /* RegistrationViewController.m */; };
 		BE1D19A31F8F5C5900B4ABC4 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19A11F8F5C5900B4ABC4 /* RegistrationViewController.xib */; };
 		BE1D19A51F8F69F700B4ABC4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BE1D19A41F8F69F700B4ABC4 /* Podfile */; };
@@ -89,9 +89,9 @@
 		BE1D19921F8F59D800B4ABC4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BE1D19931F8F59D800B4ABC4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		BE1D19941F8F59D800B4ABC4 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		BE1D19971F8F5A2100B4ABC4 /* SelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectViewController.h; sourceTree = "<group>"; };
-		BE1D19981F8F5A2100B4ABC4 /* SelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectViewController.m; sourceTree = "<group>"; };
-		BE1D19991F8F5A2100B4ABC4 /* SelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectViewController.xib; sourceTree = "<group>"; };
+		BE1D19971F8F5A2100B4ABC4 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		BE1D19981F8F5A2100B4ABC4 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		BE1D19991F8F5A2100B4ABC4 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		BE1D199F1F8F5C5900B4ABC4 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
 		BE1D19A01F8F5C5900B4ABC4 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
 		BE1D19A11F8F5C5900B4ABC4 /* RegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
@@ -523,9 +523,9 @@
 				BE1D19921F8F59D800B4ABC4 /* LoginViewController.h */,
 				BE1D19931F8F59D800B4ABC4 /* LoginViewController.m */,
 				BE1D19941F8F59D800B4ABC4 /* LoginViewController.xib */,
-				BE1D19971F8F5A2100B4ABC4 /* SelectViewController.h */,
-				BE1D19981F8F5A2100B4ABC4 /* SelectViewController.m */,
-				BE1D19991F8F5A2100B4ABC4 /* SelectViewController.xib */,
+				BE1D19971F8F5A2100B4ABC4 /* WelcomeViewController.h */,
+				BE1D19981F8F5A2100B4ABC4 /* WelcomeViewController.m */,
+				BE1D19991F8F5A2100B4ABC4 /* WelcomeViewController.xib */,
 				BE1D199F1F8F5C5900B4ABC4 /* RegistrationViewController.h */,
 				BE1D19A01F8F5C5900B4ABC4 /* RegistrationViewController.m */,
 				BE1D19A11F8F5C5900B4ABC4 /* RegistrationViewController.xib */,
@@ -599,7 +599,7 @@
 				BE1D18E31F8F0CF300B4ABC4 /* LaunchScreen.storyboard in Resources */,
 				BE1D19961F8F59D800B4ABC4 /* LoginViewController.xib in Resources */,
 				BE1D19621F8F144D00B4ABC4 /* LeftViewController.xib in Resources */,
-				BE1D199B1F8F5A2100B4ABC4 /* SelectViewController.xib in Resources */,
+				BE1D199B1F8F5A2100B4ABC4 /* WelcomeViewController.xib in Resources */,
 				BE1D197C1F8F48B500B4ABC4 /* RankingTableViewController.xib in Resources */,
 				BE1D19641F8F3A9E00B4ABC4 /* Assets.xcassets in Resources */,
 				BE1D19811F8F48D700B4ABC4 /* GroupsTableViewController.xib in Resources */,
@@ -674,7 +674,7 @@
 				BE1D19611F8F144D00B4ABC4 /* LeftViewController.m in Sources */,
 				BE1D19711F8F487600B4ABC4 /* MessageTableViewController.m in Sources */,
 				BE1D193E1F8F111400B4ABC4 /* MainTabbarController.m in Sources */,
-				BE1D199A1F8F5A2100B4ABC4 /* SelectViewController.m in Sources */,
+				BE1D199A1F8F5A2100B4ABC4 /* WelcomeViewController.m in Sources */,
 				BE1D198A1F8F490400B4ABC4 /* StudentTableViewController.m in Sources */,
 				BE1D197B1F8F48B500B4ABC4 /* RankingTableViewController.m in Sources */,
 				BE1D19A21F8F5C5900B4ABC4 /* RegistrationViewController.m in Sources */,
