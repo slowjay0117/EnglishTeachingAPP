@@ -44,6 +44,7 @@
 		BE1DE8071F906C8F009AB1B7 /* HomeTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1DE8061F906C8F009AB1B7 /* HomeTabbarViewController.m */; };
 		BE1DE80E1F906D8E009AB1B7 /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1DE80D1F906D8E009AB1B7 /* RankingViewController.m */; };
 		BE1DE8111F906DD6009AB1B7 /* HomeworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1DE8101F906DD6009AB1B7 /* HomeworkViewController.m */; };
+		BED6A80D1F90B5AB00FA0C62 /* RNFrostedSidebar.m in Sources */ = {isa = PBXBuildFile; fileRef = BED6A80C1F90B5AB00FA0C62 /* RNFrostedSidebar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +110,8 @@
 		BE1DE80D1F906D8E009AB1B7 /* RankingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingViewController.m; sourceTree = "<group>"; };
 		BE1DE80F1F906DD6009AB1B7 /* HomeworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeworkViewController.h; sourceTree = "<group>"; };
 		BE1DE8101F906DD6009AB1B7 /* HomeworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkViewController.m; sourceTree = "<group>"; };
+		BED6A80B1F90B5AB00FA0C62 /* RNFrostedSidebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNFrostedSidebar.h; sourceTree = "<group>"; };
+		BED6A80C1F90B5AB00FA0C62 /* RNFrostedSidebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNFrostedSidebar.m; sourceTree = "<group>"; };
 		C6D8B0DAF0A971604AE50D80 /* libPods-EnglishTeachingAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EnglishTeachingAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -186,6 +189,8 @@
 		BE1D19141F8F101500B4ABC4 /* 3rdFrame */ = {
 			isa = PBXGroup;
 			children = (
+				BED6A80B1F90B5AB00FA0C62 /* RNFrostedSidebar.h */,
+				BED6A80C1F90B5AB00FA0C62 /* RNFrostedSidebar.m */,
 				BE1D194F1F8F134D00B4ABC4 /* LeftSlideViewController */,
 			);
 			path = 3rdFrame;
@@ -811,6 +816,7 @@
 				BE1D18D51F8F0CF300B4ABC4 /* main.m in Sources */,
 				BE1D19801F8F48D700B4ABC4 /* GroupsTableViewController.m in Sources */,
 				BE1D19851F8F48E800B4ABC4 /* FriendTableViewController.m in Sources */,
+				BED6A80D1F90B5AB00FA0C62 /* RNFrostedSidebar.m in Sources */,
 				BE1D19471F8F115A00B4ABC4 /* ShopViewController.m in Sources */,
 				BE1DE80E1F906D8E009AB1B7 /* RankingViewController.m in Sources */,
 				BE1D19551F8F134D00B4ABC4 /* UIView_extra.m in Sources */,

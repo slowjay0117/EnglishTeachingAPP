@@ -12,8 +12,12 @@
 #import <BmobSDK/Bmob.h>
 #import "AppDelegate.h"
 #import "MainTableViewController.h"
+#import <AFNetworking.h>
+#import <UIImageView+WebCache.h>
+#import "RNFrostedSidebar.h"
 
 #define KSW [UIScreen mainScreen].bounds.size.width
 #define KSH [UIScreen mainScreen].bounds.size.height
+#define KLoadingImage [UIImage imageNamed:@"loadimage"]
 
 #endif /* PrefixHeader_pch */

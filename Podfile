@@ -4,5 +4,6 @@ target 'EnglishTeachingAPP' do
 pod 'BmobSDK'
 pod 'AFNetworking'
 pod 'SVPullToRefresh'
+pod 'SDWebImage', '~>3.8'
 
 end

@@ -8,7 +8,7 @@
 
 #import "MainTableViewController.h"
 
-@interface MainTableViewController ()
+@interface MainTableViewController ()<RNFrostedSidebarDelegate>
 
 @end
 
@@ -18,6 +18,24 @@
     [super viewDidLoad];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStyleDone target:self action:@selector(menuAction)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"user"] style:UIBarButtonItemStyleDone target:self action:@selector(showSliderBar)];
+}
+
+- (void)showSliderBar{
+    NSArray *images = @[[UIImage imageNamed:@"tmpHead"],[UIImage imageNamed:@"question"],[UIImage imageNamed:@"unread"]];
+    
+    RNFrostedSidebar *sideBar = [[RNFrostedSidebar alloc]initWithImages:images selectedIndices:nil borderColors:nil];
+    [sideBar setTitles:@[@"个人详情",@"我的作业",@"未读消息"]];
+    [sideBar.headIV sd_setImageWithURL:[NSURL URLWithString:[[BmobUser currentUser]objectForKey:@"headPath"]]placeholderImage:KLoadingImage];
+    sideBar.delegate = self;
+    [sideBar show];
+    
+}
+
+- (void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index{
+    NSLog(@"%ld", index);
+    [sidebar dismiss];
 }
 
 - (void)menuAction{
@@ -32,15 +50,15 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//#warning Incomplete implementation, return the number of sections
+//    return 0;
+//}
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//#warning Incomplete implementation, return the number of rows
+//    return 0;
+//}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
