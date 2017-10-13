@@ -50,6 +50,7 @@
     cell.textLabel.text = self.titles[indexPath.row];
     cell.imageView.image = [UIImage imageNamed:self.imageNames[indexPath.row]];
     cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
     
     return cell;
     
