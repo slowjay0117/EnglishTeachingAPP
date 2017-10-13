@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //为背景图增加一层蒙层
     UIBlurEffect* blurEffect = [UIBlurEffect effectWithStyle:(UIBlurEffectStyleLight)];
     UIVisualEffectView* visualEffect = [[UIVisualEffectView alloc]initWithEffect:blurEffect];
     [visualEffect setFrame:[UIScreen mainScreen].bounds];

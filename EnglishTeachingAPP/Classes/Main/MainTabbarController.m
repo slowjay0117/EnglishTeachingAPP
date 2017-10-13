@@ -8,8 +8,8 @@
 
 #import "MainTabbarController.h"
 #import "MainNaviController.h"
-#import "HomeTableViewController.h"
-#import "RankingTableViewController.h"
+#import "HomeTabbarViewController.h"
+#import "RankingViewController.h"
 #import "ShopViewController.h"
 #import "MessageTableViewController.h"
 #import "SettingsTableViewController.h"
@@ -31,8 +31,15 @@
     iv.image = [UIImage imageNamed:@"Bg"];
     [self.view insertSubview:iv atIndex:0];
     
-    HomeTableViewController *hvc = [HomeTableViewController new];
-    hvc.title = @"首页";
+    //为背景图增加一层蒙层
+    UIBlurEffect* blurEffect = [UIBlurEffect effectWithStyle:(UIBlurEffectStyleLight)];
+    UIVisualEffectView* visualEffect = [[UIVisualEffectView alloc]initWithEffect:blurEffect];
+    [visualEffect setFrame:[UIScreen mainScreen].bounds];
+    [iv addSubview:visualEffect];
+    
+    
+    HomeTabbarViewController *htc = [HomeTabbarViewController new];
+    htc.title = @"首页";
     MessageTableViewController *mvc = [MessageTableViewController new];
     mvc.title = @"消息列表";
     FriendTableViewController *fvc = [FriendTableViewController new];
@@ -44,7 +51,10 @@
     StudentTableViewController *stuVC = [StudentTableViewController new];
     stuVC.title = @"学生列表";
     
-    [self addChildViewController:[[MainNaviController alloc]initWithRootViewController:hvc]];
+    
+    
+    
+    [self addChildViewController:htc];
     [self addChildViewController:[[MainNaviController alloc]initWithRootViewController:mvc]];
     [self addChildViewController:[[MainNaviController alloc]initWithRootViewController:fvc]];
     [self addChildViewController:[[MainNaviController alloc]initWithRootViewController:svc]];
