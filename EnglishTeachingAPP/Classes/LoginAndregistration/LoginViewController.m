@@ -22,7 +22,12 @@
             AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
             [app showHomeVC];
         }else{
-            NSLog(@"登录失败：%@", error);
+            UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"警告" message:@"您输入的用户名或密码错误请重新输入" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+            [ac addAction:action2];
+            
+            [self presentViewController:ac animated:YES completion:nil];
         }
     }];
 }

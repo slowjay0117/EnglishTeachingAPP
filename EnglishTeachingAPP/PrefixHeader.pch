@@ -13,4 +13,7 @@
 #import "AppDelegate.h"
 #import "MainTableViewController.h"
 
+#define KSW [UIScreen mainScreen].bounds.size.width
+#define KSH [UIScreen mainScreen].bounds.size.height
+
 #endif /* PrefixHeader_pch */
