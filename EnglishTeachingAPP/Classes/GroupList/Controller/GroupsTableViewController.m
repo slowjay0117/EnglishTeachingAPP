@@ -9,7 +9,7 @@
 #import "GroupsTableViewController.h"
 
 @interface GroupsTableViewController ()
-
+@property (nonatomic, strong)NSMutableArray *classes;
 @end
 
 @implementation GroupsTableViewController
@@ -17,11 +17,47 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    UIBarButtonItem *addItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAction)];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItems = @[self.navigationItem.rightBarButtonItem,addItem];
+    [self loadClasses];
+}
+
+- (void)addAction{
+    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"提示" message:@"请输入班级名称" preferredStyle:UIAlertControllerStyleAlert];
+    [ac addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"班级名称";
+    }];
+    
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        BmobObject *bObj = [BmobObject objectWithClassName:@"Classes"];
+            [bObj setObject:ac.textFields.firstObject.text forKey:@"className"];
+            [bObj setObject:[BmobUser currentUser] forKey:@"byUser"];
+            [bObj saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+                //进行操作
+                if (isSuccessful) {
+                    [self loadClasses];
+                }else NSLog(@"保存失败");
+            }];
+    }];
+    
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    
+    [ac addAction:action1];
+    [ac addAction:action2];
+    
+    [self presentViewController:ac animated:YES completion:nil];
+}
+
+- (void)loadClasses{
+    BmobQuery *bq = [BmobQuery queryWithClassName:@"Classes"];
+    [bq includeKey:@"byUser"];
+        //开始查找所有
+        [bq findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+            self.classes = [array mutableCopy];
+            [self.tableView reloadData];
+        }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,26 +66,22 @@
 }
 
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.classes.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+    }
+    BmobObject *bObj = self.classes[indexPath.row];
+    cell.textLabel.text = [bObj objectForKey:@"className"];
+    BmobUser *user = [bObj objectForKey:@"byUser"];
+    cell.detailTextLabel.text = user.username;
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -59,17 +91,67 @@
 }
 */
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"警告" message:@"确定要删除吗?" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            BmobObject *bObj = self.classes[indexPath.row];
+            [bObj deleteInBackgroundWithBlock:^(BOOL isSuccessful, NSError *error) {
+                if (isSuccessful) {
+                    NSLog(@"删除成功");
+                }
+            }];
+            [self.classes removeObject:bObj];
+            
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }];
+        
+        UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        
+        [ac addAction:action1];
+        [ac addAction:action2];
+        
+        [self presentViewController:ac animated:YES completion:nil];
+        
+        [self loadClasses];
+    }
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    BmobObject *bObj = self.classes[indexPath.row];
+    
+    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"提示" message:@"请修改班级名称" preferredStyle:UIAlertControllerStyleAlert];
+    [ac addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.text = [bObj objectForKey:@"className"];
+    }];
+    
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [bObj setObject:ac.textFields.firstObject.text forKey:@"className"];
+        NSLog(@"%@", ac.textFields.firstObject.text);
+        [bObj setObject:[BmobUser currentUser] forKey:@"byUser"];
+        
+        [bObj updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+            if (isSuccessful) {
+                NSLog(@"保存成功");
+                [self loadClasses];
+            }
+        }];
+    }];
+    
+    
+    
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    
+    [ac addAction:action1];
+    [ac addAction:action2];
+    
+    [self presentViewController:ac animated:YES completion:nil];
+}
+
+
 
 /*
 // Override to support rearranging the table view.

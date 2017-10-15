@@ -136,6 +136,7 @@
     //显示之前的昵称
     self.nickTF.text = [bUser objectForKey:@"nick"];
     NSString *path = [bUser objectForKey:@"headPath"];
+//    NSLog(@"%@", path);
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:path]];
     self.headIV.image = [UIImage imageWithData:data];
 }
@@ -167,7 +168,16 @@
                         [bUser updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
                             if (isSuccessful) {
                                 //如果成功返回页面
-                                [self dismissViewControllerAnimated:YES completion:nil];
+                                UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"提示" message:@"保存成功" preferredStyle:UIAlertControllerStyleAlert];
+                                
+                                UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                                    [self dismissViewControllerAnimated:YES completion:nil];
+                                }];
+
+                                [ac addAction:action2];
+                                
+                                [self presentViewController:ac animated:YES completion:nil];
+                                
                             }
                         }];
                         
@@ -188,13 +198,9 @@
     
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        //把UIImage转成NSData
         self.imageData = UIImageJPEGRepresentation(image, .5);
     
         self.headIV.image = image;
-//    });
-    
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

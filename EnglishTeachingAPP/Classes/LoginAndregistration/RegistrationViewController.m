@@ -17,8 +17,8 @@
 @implementation RegistrationViewController
 - (IBAction)clicked:(id)sender {
     BmobUser *bUser = [[BmobUser alloc] init];
-    [bUser setUsername:@"admin"];
-    [bUser setPassword:@"admin"];
+    [bUser setUsername:self.nameTF.text];
+    [bUser setPassword:self.passwordTF.text];
     [bUser signUpInBackgroundWithBlock:^ (BOOL isSuccessful, NSError *error){
         if (isSuccessful){
             AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
