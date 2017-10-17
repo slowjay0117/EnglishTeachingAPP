@@ -7,21 +7,22 @@
 //
 
 #import "StudentTableViewController.h"
+#import "RegistrationStudentViewController.h"
 
 @interface StudentTableViewController ()
-
 @end
 
 @implementation StudentTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAction)];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)addAction{
+    RegistrationStudentViewController *rsVC = [RegistrationStudentViewController new];
+    [self.navigationController pushViewController:rsVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

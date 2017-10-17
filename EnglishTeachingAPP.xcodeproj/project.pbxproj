@@ -45,6 +45,10 @@
 		BE1DE80E1F906D8E009AB1B7 /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1DE80D1F906D8E009AB1B7 /* RankingViewController.m */; };
 		BE1DE8111F906DD6009AB1B7 /* HomeworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1DE8101F906DD6009AB1B7 /* HomeworkViewController.m */; };
 		BED6A80D1F90B5AB00FA0C62 /* RNFrostedSidebar.m in Sources */ = {isa = PBXBuildFile; fileRef = BED6A80C1F90B5AB00FA0C62 /* RNFrostedSidebar.m */; };
+		BED6A8111F935FB300FA0C62 /* RegistrationStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED6A80F1F935FB300FA0C62 /* RegistrationStudentViewController.m */; };
+		BED6A8121F935FB300FA0C62 /* RegistrationStudentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BED6A8101F935FB300FA0C62 /* RegistrationStudentViewController.xib */; };
+		BED6A8151F95E10200FA0C62 /* Utlis.m in Sources */ = {isa = PBXBuildFile; fileRef = BED6A8141F95E10200FA0C62 /* Utlis.m */; };
+		BED6A8171F95E14200FA0C62 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED6A8161F95E14200FA0C62 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +116,12 @@
 		BE1DE8101F906DD6009AB1B7 /* HomeworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkViewController.m; sourceTree = "<group>"; };
 		BED6A80B1F90B5AB00FA0C62 /* RNFrostedSidebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNFrostedSidebar.h; sourceTree = "<group>"; };
 		BED6A80C1F90B5AB00FA0C62 /* RNFrostedSidebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNFrostedSidebar.m; sourceTree = "<group>"; };
+		BED6A80E1F935FB300FA0C62 /* RegistrationStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationStudentViewController.h; sourceTree = "<group>"; };
+		BED6A80F1F935FB300FA0C62 /* RegistrationStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationStudentViewController.m; sourceTree = "<group>"; };
+		BED6A8101F935FB300FA0C62 /* RegistrationStudentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationStudentViewController.xib; sourceTree = "<group>"; };
+		BED6A8131F95E10200FA0C62 /* Utlis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utlis.h; sourceTree = "<group>"; };
+		BED6A8141F95E10200FA0C62 /* Utlis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utlis.m; sourceTree = "<group>"; };
+		BED6A8161F95E14200FA0C62 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C6D8B0DAF0A971604AE50D80 /* libPods-EnglishTeachingAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EnglishTeachingAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BED6A8171F95E14200FA0C62 /* AVFoundation.framework in Frameworks */,
 				531D547061FFB62E38DA052B /* libPods-EnglishTeachingAPP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +150,7 @@
 		80EC54CF1E8DF5A96EAD3CA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BED6A8161F95E14200FA0C62 /* AVFoundation.framework */,
 				C6D8B0DAF0A971604AE50D80 /* libPods-EnglishTeachingAPP.a */,
 			);
 			name = Frameworks;
@@ -556,6 +568,9 @@
 				BE1D199F1F8F5C5900B4ABC4 /* RegistrationViewController.h */,
 				BE1D19A01F8F5C5900B4ABC4 /* RegistrationViewController.m */,
 				BE1D19A11F8F5C5900B4ABC4 /* RegistrationViewController.xib */,
+				BED6A80E1F935FB300FA0C62 /* RegistrationStudentViewController.h */,
+				BED6A80F1F935FB300FA0C62 /* RegistrationStudentViewController.m */,
+				BED6A8101F935FB300FA0C62 /* RegistrationStudentViewController.xib */,
 			);
 			path = LoginAndregistration;
 			sourceTree = "<group>";
@@ -625,6 +640,8 @@
 		BE1D19AF1F9059B700B4ABC4 /* Utlis */ = {
 			isa = PBXGroup;
 			children = (
+				BED6A8131F95E10200FA0C62 /* Utlis.h */,
+				BED6A8141F95E10200FA0C62 /* Utlis.m */,
 			);
 			path = Utlis;
 			sourceTree = "<group>";
@@ -725,6 +742,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE1D19771F8F489800B4ABC4 /* SettingsTableViewController.xib in Resources */,
+				BED6A8121F935FB300FA0C62 /* RegistrationStudentViewController.xib in Resources */,
 				BE1D18E31F8F0CF300B4ABC4 /* LaunchScreen.storyboard in Resources */,
 				BE1D19961F8F59D800B4ABC4 /* LoginViewController.xib in Resources */,
 				BE1D19621F8F144D00B4ABC4 /* LeftViewController.xib in Resources */,
@@ -808,12 +826,14 @@
 				BE1D19A21F8F5C5900B4ABC4 /* RegistrationViewController.m in Sources */,
 				BE1D19B71F90663A00B4ABC4 /* MainTableViewController.m in Sources */,
 				BE1D196A1F8F476E00B4ABC4 /* MainNaviController.m in Sources */,
+				BED6A8151F95E10200FA0C62 /* Utlis.m in Sources */,
 				BE1DE8071F906C8F009AB1B7 /* HomeTabbarViewController.m in Sources */,
 				BE1D19541F8F134D00B4ABC4 /* LeftSlideViewController.m in Sources */,
 				BE1D19951F8F59D800B4ABC4 /* LoginViewController.m in Sources */,
 				BE1DE8111F906DD6009AB1B7 /* HomeworkViewController.m in Sources */,
 				BE1D19B31F905F9E00B4ABC4 /* SettingInfoViewController.m in Sources */,
 				BE1D18D51F8F0CF300B4ABC4 /* main.m in Sources */,
+				BED6A8111F935FB300FA0C62 /* RegistrationStudentViewController.m in Sources */,
 				BE1D19801F8F48D700B4ABC4 /* GroupsTableViewController.m in Sources */,
 				BE1D19851F8F48E800B4ABC4 /* FriendTableViewController.m in Sources */,
 				BED6A80D1F90B5AB00FA0C62 /* RNFrostedSidebar.m in Sources */,
