@@ -10,6 +10,7 @@
 #import "RegistrationStudentViewController.h"
 
 @interface StudentTableViewController ()
+@property (nonatomic, strong)NSMutableArray *students;
 @end
 
 @implementation StudentTableViewController
@@ -17,7 +18,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAction)];
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self loadStudents];
+}
+
+- (void)loadStudents{
+    BmobQuery *bq = [BmobQuery queryWithClassName:@"_User"];
+    [bq whereKey:@"isTeacher" notEqualTo:@(YES)];
+    [bq findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        self.students = [array mutableCopy];
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)addAction{
@@ -32,25 +46,22 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.students.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    BmobObject *obj = self.students[indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-    // Configure the cell...
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+    }
+    
+    cell.textLabel.text = [obj objectForKey:@"username"];
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
