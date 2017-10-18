@@ -70,12 +70,18 @@
     [super viewDidAppear:animated];
     //判断当前用户的初始密码是否修改过
     BmobUser *user = [BmobUser currentUser];
-    
+    //得到用户密码
     NSString *pw = [user objectForKey:@"updatePwd"];
+    //得到用户昵称和头像
+    NSString *nick = [user objectForKey:@"nick"];
+    NSString *headImage = [user objectForKey:@"headPath"];
+    SettingInfoViewController *vc = [SettingInfoViewController new];
     //如果没有更新完之后的密码 则认为没有修改过初始密码
     if (!pw) {
-        SettingInfoViewController *vc = [SettingInfoViewController new];
         vc.rowNumber = 0;
+        [self presentViewController:vc animated:YES completion:nil];
+    } else if (!nick||!headImage){
+        vc.rowNumber = 1;
         [self presentViewController:vc animated:YES completion:nil];
     }
 }
