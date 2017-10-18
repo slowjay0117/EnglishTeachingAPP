@@ -16,6 +16,7 @@
 #import "GroupsTableViewController.h"
 #import "FriendTableViewController.h"
 #import "StudentTableViewController.h"
+#import "SettingInfoViewController.h"
 
 
 @interface MainTabbarController ()
@@ -63,6 +64,20 @@
     
     self.tabBar.hidden = YES;
     
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    //判断当前用户的初始密码是否修改过
+    BmobUser *user = [BmobUser currentUser];
+    
+    NSString *pw = [user objectForKey:@"updatePwd"];
+    //如果没有更新完之后的密码 则认为没有修改过初始密码
+    if (!pw) {
+        SettingInfoViewController *vc = [SettingInfoViewController new];
+        vc.rowNumber = 0;
+        [self presentViewController:vc animated:YES completion:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

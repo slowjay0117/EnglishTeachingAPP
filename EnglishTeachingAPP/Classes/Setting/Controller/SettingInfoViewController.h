@@ -10,4 +10,6 @@
 
 @interface SettingInfoViewController : UIViewController
 @property (nonatomic, assign) NSInteger rowNumber;
+
+- (void)changePassword;
 @end

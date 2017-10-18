@@ -81,6 +81,9 @@
         
         [bUser updateCurrentUserPasswordWithOldPassword:self.oldPwdTF.text newPassword:self.pwd1.text block:^(BOOL isSuccessful, NSError *error) {
             if (isSuccessful) {
+                //如果密码修改成功 给用户加一个修改完之后的密码字段
+                [bUser setObject:self.pwd1.text forKey:@"updatePwd"];
+                [bUser updateInBackground];
                 UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"提示" message:@"您的密码更改成功，请重新登录" preferredStyle:UIAlertControllerStyleAlert];
                 
                 UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
