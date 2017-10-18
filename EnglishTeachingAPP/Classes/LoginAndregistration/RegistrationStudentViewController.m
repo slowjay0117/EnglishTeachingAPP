@@ -78,9 +78,12 @@
 }
 
 - (void)saveAction{
-    if (![Utlis checkingString:self.usernameTF.text]||![Utlis checkingString:self.nickFT.text]||![Utlis checkingString:self.passwordTF.text]) {
+    if (![Utlis checkingString:self.usernameTF.text]||![Utlis checkingString:self.nickFT.text]||![Utlis checkingString:self.passwordTF.text]||self.selectedClass.count == 0) {
         return;
     }
+    
+    self.scoreTF.text = [self checkTextFieldWithString:self.scoreTF.text];
+    self.moneyTF.text = [self checkTextFieldWithString:self.moneyTF.text];
     
     BmobUser *bUser = [[BmobUser alloc] init];
     [bUser setUsername:self.usernameTF.text];
@@ -97,6 +100,14 @@
             NSLog(@"%@",error);
         }
     }];
+}
+
+- (NSString *)checkTextFieldWithString:(NSString *)string{
+    NSString *newString = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if (newString.length == 0) {
+        string = @"0";
+    }
+    return string;
 }
 
 - (void)saveHeadImageWithUser:(BmobUser *)user{

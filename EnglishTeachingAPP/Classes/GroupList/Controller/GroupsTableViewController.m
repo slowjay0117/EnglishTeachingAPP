@@ -20,6 +20,10 @@
     UIBarButtonItem *addItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAction)];
     
     self.navigationItem.rightBarButtonItems = @[self.navigationItem.rightBarButtonItem,addItem];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self loadClasses];
 }
 

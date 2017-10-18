@@ -8,6 +8,7 @@
 
 #import "StudentTableViewController.h"
 #import "RegistrationStudentViewController.h"
+#import "StudentListCell.h"
 
 @interface StudentTableViewController ()
 @property (nonatomic, strong)NSMutableArray *students;
@@ -18,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAction)];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"StudentListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"StudentListCell"];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -27,7 +30,7 @@
 
 - (void)loadStudents{
     BmobQuery *bq = [BmobQuery queryWithClassName:@"_User"];
-    [bq whereKey:@"isTeacher" notEqualTo:@(YES)];
+    [bq whereKey:@"isTeacher" notEqualTo:@"YES"];
     [bq findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
         self.students = [array mutableCopy];
         [self.tableView reloadData];
@@ -52,15 +55,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BmobObject *obj = self.students[indexPath.row];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    StudentListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StudentListCell" forIndexPath:indexPath];
     
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
-    }
+    cell.usernameTF.text = [obj objectForKey:@"username"];
+    cell.nickTF.text = [obj objectForKey:@"nick"];
+    NSString *money = [obj objectForKey:@"money"];
+    NSString *score = [obj objectForKey:@"scoreTF"];
     
-    cell.textLabel.text = [obj objectForKey:@"username"];
+    cell.moneyTF.text = [NSString stringWithFormat:@"金币：%@", money];
+    cell.scoreTF.text = [NSString stringWithFormat:@"积分：%@", score];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 70;
 }
 
 /*

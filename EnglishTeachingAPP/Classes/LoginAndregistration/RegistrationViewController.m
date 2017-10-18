@@ -19,6 +19,7 @@
     BmobUser *bUser = [[BmobUser alloc] init];
     [bUser setUsername:self.nameTF.text];
     [bUser setPassword:self.passwordTF.text];
+    [bUser setObject:@"YES" forKey:@"isTeacher"];
     [bUser signUpInBackgroundWithBlock:^ (BOOL isSuccessful, NSError *error){
         if (isSuccessful){
             AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;

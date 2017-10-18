@@ -49,6 +49,8 @@
 		BED6A8121F935FB300FA0C62 /* RegistrationStudentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BED6A8101F935FB300FA0C62 /* RegistrationStudentViewController.xib */; };
 		BED6A8151F95E10200FA0C62 /* Utlis.m in Sources */ = {isa = PBXBuildFile; fileRef = BED6A8141F95E10200FA0C62 /* Utlis.m */; };
 		BED6A8171F95E14200FA0C62 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED6A8161F95E14200FA0C62 /* AVFoundation.framework */; };
+		BED6A81B1F96009600FA0C62 /* StudentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BED6A8191F96009600FA0C62 /* StudentListCell.m */; };
+		BED6A81C1F96009600FA0C62 /* StudentListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BED6A81A1F96009600FA0C62 /* StudentListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +124,9 @@
 		BED6A8131F95E10200FA0C62 /* Utlis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utlis.h; sourceTree = "<group>"; };
 		BED6A8141F95E10200FA0C62 /* Utlis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utlis.m; sourceTree = "<group>"; };
 		BED6A8161F95E14200FA0C62 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BED6A8181F96009600FA0C62 /* StudentListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentListCell.h; sourceTree = "<group>"; };
+		BED6A8191F96009600FA0C62 /* StudentListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentListCell.m; sourceTree = "<group>"; };
+		BED6A81A1F96009600FA0C62 /* StudentListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentListCell.xib; sourceTree = "<group>"; };
 		C6D8B0DAF0A971604AE50D80 /* libPods-EnglishTeachingAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EnglishTeachingAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -507,6 +512,9 @@
 		BE1D193D1F8F111400B4ABC4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BED6A8181F96009600FA0C62 /* StudentListCell.h */,
+				BED6A8191F96009600FA0C62 /* StudentListCell.m */,
+				BED6A81A1F96009600FA0C62 /* StudentListCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -748,6 +756,7 @@
 				BE1D19621F8F144D00B4ABC4 /* LeftViewController.xib in Resources */,
 				BE1D199B1F8F5A2100B4ABC4 /* WelcomeViewController.xib in Resources */,
 				BE1D19641F8F3A9E00B4ABC4 /* Assets.xcassets in Resources */,
+				BED6A81C1F96009600FA0C62 /* StudentListCell.xib in Resources */,
 				BE1D19B41F905F9E00B4ABC4 /* SettingInfoViewController.xib in Resources */,
 				BE1D19811F8F48D700B4ABC4 /* GroupsTableViewController.xib in Resources */,
 				BE1D19861F8F48E800B4ABC4 /* FriendTableViewController.xib in Resources */,
@@ -838,6 +847,7 @@
 				BE1D19851F8F48E800B4ABC4 /* FriendTableViewController.m in Sources */,
 				BED6A80D1F90B5AB00FA0C62 /* RNFrostedSidebar.m in Sources */,
 				BE1D19471F8F115A00B4ABC4 /* ShopViewController.m in Sources */,
+				BED6A81B1F96009600FA0C62 /* StudentListCell.m in Sources */,
 				BE1DE80E1F906D8E009AB1B7 /* RankingViewController.m in Sources */,
 				BE1D19551F8F134D00B4ABC4 /* UIView_extra.m in Sources */,
 				BE1D194A1F8F118100B4ABC4 /* HomeTableViewController.m in Sources */,
