@@ -21,6 +21,25 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAction)];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"StudentListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"StudentListCell"];
+    
+    __weak StudentTableViewController *weakSelf = self;
+    //添加上拉加载
+    [self.tableView addInfiniteScrollingWithActionHandler:^{
+        
+        BmobQuery *bq = [BmobQuery queryForUser];
+        bq.limit = 30;
+        bq.skip = weakSelf.students.count;
+        //查询不是老师的用户
+        [bq whereKey:@"isteacher" notEqualTo:@(YES)];
+        [bq findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+            [SVProgressHUD dismiss];
+            [weakSelf.students addObjectsFromArray:array];
+            [weakSelf.tableView reloadData];
+            [weakSelf.tableView.infiniteScrollingView stopAnimating];
+        }];
+        
+        
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -29,9 +48,11 @@
 }
 
 - (void)loadStudents{
+    [SVProgressHUD show];
     BmobQuery *bq = [BmobQuery queryWithClassName:@"_User"];
     [bq whereKey:@"isTeacher" notEqualTo:@"YES"];
     [bq findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        [SVProgressHUD dismiss];
         self.students = [array mutableCopy];
         [self.tableView reloadData];
     }];
@@ -54,16 +75,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    BmobObject *obj = self.students[indexPath.row];
+    
     StudentListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StudentListCell" forIndexPath:indexPath];
     
-    cell.usernameTF.text = [obj objectForKey:@"username"];
-    cell.nickTF.text = [obj objectForKey:@"nick"];
-    NSString *money = [obj objectForKey:@"money"];
-    NSString *score = [obj objectForKey:@"scoreTF"];
-    
-    cell.moneyTF.text = [NSString stringWithFormat:@"金币：%@", money];
-    cell.scoreTF.text = [NSString stringWithFormat:@"积分：%@", score];
+    cell.students = self.students[indexPath.row];
     
     return cell;
 }

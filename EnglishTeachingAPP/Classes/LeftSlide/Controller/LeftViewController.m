@@ -38,7 +38,10 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.titles.count;
+    if ([[[BmobUser currentUser] objectForKey:@"isTeacher"] isEqualToString:@"YES"]) {
+        return self.titles.count;
+    }
+    return self.titles.count-2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

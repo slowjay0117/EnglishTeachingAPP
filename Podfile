@@ -5,5 +5,6 @@ pod 'BmobSDK'
 pod 'AFNetworking'
 pod 'SVPullToRefresh'
 pod 'SDWebImage', '~>3.8'
+pod 'SVProgressHUD'
 
 end

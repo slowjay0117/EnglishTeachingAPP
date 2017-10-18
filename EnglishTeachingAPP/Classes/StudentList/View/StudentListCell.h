@@ -15,4 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *moneyTF;
 @property (weak, nonatomic) IBOutlet UILabel *scoreTF;
 
+@property (nonatomic, strong) BmobUser *students;
+
 @end

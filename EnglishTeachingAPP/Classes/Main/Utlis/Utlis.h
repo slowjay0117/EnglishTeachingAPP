@@ -11,4 +11,6 @@
 static AVAudioPlayer *player;
 @interface Utlis : NSObject
 +(BOOL)checkingString:(NSString *)string;
+
++ (void)loginTeacherAccount;
 @end

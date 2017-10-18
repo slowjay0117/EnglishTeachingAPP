@@ -20,4 +20,16 @@
     }
     return YES;
 }
+
++ (void)loginTeacherAccount{
+    NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+    NSString *pwd = [[NSUserDefaults standardUserDefaults] objectForKey:@"password"];
+    
+    //登录回老师账号
+    [BmobUser loginInbackgroundWithAccount:username andPassword:pwd block:^(BmobUser *user, NSError *error) {
+        if (user) {
+            [SVProgressHUD showInfoWithStatus:@"登录回老师账号"];
+        }
+    }];
+}
 @end

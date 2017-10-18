@@ -78,6 +78,7 @@
 }
 
 - (void)saveAction{
+    [SVProgressHUD show];
     if (![Utlis checkingString:self.usernameTF.text]||![Utlis checkingString:self.nickFT.text]||![Utlis checkingString:self.passwordTF.text]||self.selectedClass.count == 0) {
         return;
     }
@@ -92,6 +93,7 @@
     [bUser setObject:self.scoreTF.text forKey:@"scoreTF"];
     [bUser setObject:self.moneyTF.text forKey:@"money"];
     [bUser signUpInBackgroundWithBlock:^ (BOOL isSuccessful, NSError *error){
+        [SVProgressHUD dismiss];
         if (isSuccessful){
             //保存头像
             [self saveHeadImageWithUser:bUser];
@@ -113,17 +115,22 @@
 - (void)saveHeadImageWithUser:(BmobUser *)user{
     if (self.headImage) {        
         NSData *data = UIImageJPEGRepresentation(self.headImage, .2);
+        [SVProgressHUD showProgress:0 status:@"开始上传"];
         [BmobFile filesUploadBatchWithDataArray:@[@{@"filename":@"a.jpg",@"data":data}] progressBlock:^(int index, float progress) {
         } resultBlock:^(NSArray *array, BOOL isSuccessful, NSError *error) {
             if (isSuccessful) {
                 BmobFile *bf = array[0];
                 [user setObject:bf.url forKey:@"headPath"];
                 [user updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+                    [SVProgressHUD dismiss];
+                    //登录回老师账号
+                    [Utlis loginTeacherAccount];
                     [self.navigationController popViewControllerAnimated:YES];
                 }];
             }
         }];
-    }else{
+    }else{//没有头像
+        [Utlis loginTeacherAccount];
         [self.navigationController popViewControllerAnimated:YES];
     }
 }

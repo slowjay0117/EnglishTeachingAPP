@@ -19,6 +19,13 @@
 - (IBAction)clicked:(id)sender {
     [BmobUser loginInbackgroundWithAccount:self.nameTF.text andPassword:self.passwordTF.text block:^(BmobUser *user, NSError *error) {
         if (user) {
+            //保存登录的账号和密码
+            NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+            [ud setObject:self.nameTF.text forKey:@"username"];
+            [ud setObject:self.passwordTF.text forKey:@"password"];
+            
+            [ud synchronize];
+            
             AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
             [app showHomeVC];
         }else{
