@@ -75,6 +75,17 @@
     [super viewDidLoad];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"save" style:UIBarButtonItemStyleDone target:self action:@selector(saveAction)];
     [self loadClasses];
+    
+    if (self.student) {
+        self.usernameTF.text = self.student.username;
+        self.passwordTF.text = self.student[@"updatePwd"]?self.student[@"updatePwd"]:@"12345678";
+        self.nickFT.text = self.student[@"nick"];
+        self.scoreTF.text = self.student[@"scoreTF"];
+        self.moneyTF.text = self.student[@"money"];
+        self.selectedClass = [self.student[@"classes"] mutableCopy];
+        [self.headBtn sd_setImageWithURL:[NSURL URLWithString:self.student[@"headPath"]] forState:UIControlStateNormal placeholderImage:KLoadingImage];
+    }
+    
 }
 
 - (void)saveAction{
@@ -83,23 +94,61 @@
         return;
     }
     
+    if (self.student) {
+        NSString *pw = self.student[@"updatePwd"]?self.student[@"updatePwd"]:@"12345678";
+        [BmobUser loginWithUsernameInBackground:self.student.username password:pw block:^(BmobUser *user, NSError *error) {
+            if (user) {
+                [SVProgressHUD showWithStatus:@"登录当前学生成功！"];
+                [self updateStudent];
+            }
+        }];
+        
+    }else{
+        BmobUser *bUser = [[BmobUser alloc] init];
+        //新建
+        self.scoreTF.text = [self checkTextFieldWithString:self.scoreTF.text];
+        self.moneyTF.text = [self checkTextFieldWithString:self.moneyTF.text];
+        
+        [bUser setUsername:self.usernameTF.text];
+        [bUser setPassword:self.passwordTF.text];
+        [bUser setObject:self.nickFT.text forKey:@"nick"];
+        [bUser setObject:self.scoreTF.text forKey:@"scoreTF"];
+        [bUser setObject:self.moneyTF.text forKey:@"money"];
+        [bUser setObject:self.selectedClass forKey:@"classes"];
+        [SVProgressHUD show];
+        [bUser signUpInBackgroundWithBlock:^ (BOOL isSuccessful, NSError *error){
+            [SVProgressHUD dismiss];
+            if (isSuccessful){
+                //保存头像
+                [self saveHeadImageWithUser:bUser];
+                NSLog(@"保存成功");
+            } else {
+                NSLog(@"%@",error);
+            }
+        }];
+    }
+ 
+}
+
+- (void)updateStudent{
+    BmobUser *user = self.student;
     self.scoreTF.text = [self checkTextFieldWithString:self.scoreTF.text];
     self.moneyTF.text = [self checkTextFieldWithString:self.moneyTF.text];
     
-    BmobUser *bUser = [[BmobUser alloc] init];
-    [bUser setUsername:self.usernameTF.text];
-    [bUser setPassword:self.passwordTF.text];
-    [bUser setObject:self.nickFT.text forKey:@"nick"];
-    [bUser setObject:self.scoreTF.text forKey:@"scoreTF"];
-    [bUser setObject:self.moneyTF.text forKey:@"money"];
-    [bUser signUpInBackgroundWithBlock:^ (BOOL isSuccessful, NSError *error){
+    [user setUsername:self.usernameTF.text];
+    [user setPassword:self.passwordTF.text];
+    [user setObject:self.nickFT.text forKey:@"nick"];
+    [user setObject:self.scoreTF.text forKey:@"scoreTF"];
+    [user setObject:self.moneyTF.text forKey:@"money"];
+    [user setObject:self.selectedClass forKey:@"classes"];
+    [SVProgressHUD show];
+    [user updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
         [SVProgressHUD dismiss];
-        if (isSuccessful){
-            //保存头像
-            [self saveHeadImageWithUser:bUser];
+        if (isSuccessful) {
+            [self saveHeadImageWithUser:user];
             NSLog(@"保存成功");
-        } else {
-            NSLog(@"%@",error);
+        }else{
+            NSLog(@"保存失败");
         }
     }];
 }

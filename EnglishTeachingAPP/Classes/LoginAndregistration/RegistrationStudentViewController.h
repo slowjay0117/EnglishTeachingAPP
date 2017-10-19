@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface RegistrationStudentViewController : UIViewController
-
+@property (nonatomic, strong) BmobUser *student;
 @end

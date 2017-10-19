@@ -51,6 +51,7 @@
 		BED6A8171F95E14200FA0C62 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED6A8161F95E14200FA0C62 /* AVFoundation.framework */; };
 		BED6A81B1F96009600FA0C62 /* StudentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BED6A8191F96009600FA0C62 /* StudentListCell.m */; };
 		BED6A81C1F96009600FA0C62 /* StudentListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BED6A81A1F96009600FA0C62 /* StudentListCell.xib */; };
+		BED6A8221F98510400FA0C62 /* BmobObject+Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = BED6A8211F98510400FA0C62 /* BmobObject+Dictionary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +128,8 @@
 		BED6A8181F96009600FA0C62 /* StudentListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentListCell.h; sourceTree = "<group>"; };
 		BED6A8191F96009600FA0C62 /* StudentListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentListCell.m; sourceTree = "<group>"; };
 		BED6A81A1F96009600FA0C62 /* StudentListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentListCell.xib; sourceTree = "<group>"; };
+		BED6A8201F98510400FA0C62 /* BmobObject+Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BmobObject+Dictionary.h"; sourceTree = "<group>"; };
+		BED6A8211F98510400FA0C62 /* BmobObject+Dictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BmobObject+Dictionary.m"; sourceTree = "<group>"; };
 		C6D8B0DAF0A971604AE50D80 /* libPods-EnglishTeachingAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EnglishTeachingAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -650,6 +653,8 @@
 			children = (
 				BED6A8131F95E10200FA0C62 /* Utlis.h */,
 				BED6A8141F95E10200FA0C62 /* Utlis.m */,
+				BED6A8201F98510400FA0C62 /* BmobObject+Dictionary.h */,
+				BED6A8211F98510400FA0C62 /* BmobObject+Dictionary.m */,
 			);
 			path = Utlis;
 			sourceTree = "<group>";
@@ -829,6 +834,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BED6A8221F98510400FA0C62 /* BmobObject+Dictionary.m in Sources */,
 				BE1D19761F8F489800B4ABC4 /* SettingsTableViewController.m in Sources */,
 				BE1D19611F8F144D00B4ABC4 /* LeftViewController.m in Sources */,
 				BE1D19711F8F487600B4ABC4 /* MessageTableViewController.m in Sources */,

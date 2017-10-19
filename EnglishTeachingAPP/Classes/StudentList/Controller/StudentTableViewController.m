@@ -31,6 +31,7 @@
         bq.skip = weakSelf.students.count;
         //查询不是老师的用户
         [bq whereKey:@"isteacher" notEqualTo:@(YES)];
+        [bq orderByDescending:@"createdAt"];
         [bq findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
             [SVProgressHUD dismiss];
             [weakSelf.students addObjectsFromArray:array];
@@ -45,12 +46,16 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self loadStudents];
+    if (self.students.count == 0) {
+        [self loadStudents];
+    }
 }
 
 - (void)loadStudents{
     [SVProgressHUD show];
     BmobQuery *bq = [BmobQuery queryWithClassName:@"_User"];
     [bq whereKey:@"isTeacher" notEqualTo:@"YES"];
+    [bq orderByDescending:@"createdAt"];
     [bq findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
         [SVProgressHUD dismiss];
         self.students = [array mutableCopy];
@@ -85,6 +90,16 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 70;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    BmobUser *user = self.students[indexPath.row];
+    
+    RegistrationStudentViewController *vc = [RegistrationStudentViewController new];
+    
+    vc.student = user;
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /*
