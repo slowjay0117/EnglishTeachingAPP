@@ -22,7 +22,14 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"StudentListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"StudentListCell"];
     
+    self.tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    
     __weak StudentTableViewController *weakSelf = self;
+    //添加下拉刷新
+    [self.tableView addPullToRefreshWithActionHandler:^{
+        [weakSelf loadStudents];
+    }];
+    
     //添加上拉加载
     [self.tableView addInfiniteScrollingWithActionHandler:^{
         
@@ -41,11 +48,11 @@
         
         
     }];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self loadStudents];
     if (self.students.count == 0) {
         [self loadStudents];
     }
@@ -60,7 +67,9 @@
         [SVProgressHUD dismiss];
         self.students = [array mutableCopy];
         [self.tableView reloadData];
+        [self.tableView.pullToRefreshView stopAnimating];
     }];
+   
 }
 
 - (void)addAction{
