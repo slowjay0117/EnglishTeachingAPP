@@ -6,5 +6,6 @@ pod 'AFNetworking'
 pod 'SVPullToRefresh'
 pod 'SDWebImage', '~>3.8'
 pod 'SVProgressHUD'
+pod "ZYSuspensionView/SuspensionView"
 
 end

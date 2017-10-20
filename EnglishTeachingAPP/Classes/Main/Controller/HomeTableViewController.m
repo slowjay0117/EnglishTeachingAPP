@@ -8,8 +8,9 @@
 
 #import "HomeTableViewController.h"
 #import "AppDelegate.h"
+#import "SendingViewController.h"
 
-@interface HomeTableViewController ()
+@interface HomeTableViewController ()<ZYSuspensionViewDelegate>
 
 @end
 
@@ -18,11 +19,41 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.navigationItem.rightBarButtonItem = self.navigationItem.rightBarButtonItem;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    UIColor *color = [UIColor colorWithRed:180/255.0 green:204/255.0 blue:244/255.0 alpha:.5];
+    
+    ZYSuspensionView *susView = [[ZYSuspensionView alloc] initWithFrame:CGRectMake(- 50.0 / 6, 200, 50, 50) color:color delegate:self];
+    [susView setBackgroundImage:[UIImage imageNamed:@"menu"] forState:UIControlStateNormal];
+    [susView show];
+}
+
+- (void)suspensionViewClick:(ZYSuspensionView *)suspensionView{
+    if (KIsTeacher) {
+        UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"提示" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        
+        UIAlertAction *action0 = [UIAlertAction actionWithTitle:@"发朋友圈" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            SendingViewController *vc = [SendingViewController new];
+            [self presentViewController:[[UINavigationController alloc
+                                          ]initWithRootViewController:vc] animated:YES completion:nil];
+        }];
+        
+        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"发布作业" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        
+        UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+        
+        [ac addAction:action0];
+        [ac addAction:action1];
+        [ac addAction:action2];
+        
+        [self presentViewController:ac animated:YES completion:nil];
+    }else{
+        SendingViewController *vc = [SendingViewController new];
+        [self presentViewController:[[UINavigationController alloc
+                                      ]initWithRootViewController:vc] animated:YES completion:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

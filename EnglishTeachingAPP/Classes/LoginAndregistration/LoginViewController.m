@@ -12,6 +12,7 @@
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameTF;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTF;
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 
 @end
 
@@ -43,6 +44,23 @@
     [super viewDidLoad];
     self.title = @"登录";
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    //监听软键盘
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardChangeAction:) name:UIKeyboardWillChangeFrameNotification object:nil];
+}
+
+- (void)keyboardChangeAction:(NSNotification *)noti{
+    //得到软键盘的Frame
+    CGRect keyboardF = [noti.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    
+    //判断收软键盘
+    if (keyboardF.origin.y == KSH) {
+        //还原
+        self.loginBtn.transform = CGAffineTransformIdentity;
+    }else{//软键盘弹出
+        self.loginBtn.transform = CGAffineTransformMakeTranslation(0, -keyboardF.size.height);
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -32,4 +32,23 @@
         }
     }];
 }
+
++ (void)faceMappingWithText:(YYTextView *)tv{
+    //表情解析器
+    YYTextSimpleEmoticonParser *parser = [YYTextSimpleEmoticonParser new];
+    
+    NSMutableDictionary *mapperDic = [NSMutableDictionary dictionary];
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"default" ofType:@"plist"];
+    NSArray *faceArr = [NSArray arrayWithContentsOfFile:path];
+    for (NSDictionary *faceDic in faceArr) {
+        NSString *imageName = faceDic[@"png"];
+        NSString *text = faceDic[@"chs"];
+        
+        [mapperDic setObject:[UIImage imageNamed:imageName] forKey:text];
+    }
+    
+    parser.emoticonMapper = mapperDic;
+    
+    tv.textParser = parser;
+}
 @end

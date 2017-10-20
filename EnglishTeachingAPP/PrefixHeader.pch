@@ -20,9 +20,11 @@
 #import <SVProgressHUD.h>
 #import <UIButton+WebCache.h>
 #import "BmobObject+Dictionary.h"
+#import <ZYSuspensionView.h>
 
 #define KSW [UIScreen mainScreen].bounds.size.width
 #define KSH [UIScreen mainScreen].bounds.size.height
 #define KLoadingImage [UIImage imageNamed:@"loadimage"]
+#define KIsTeacher [[[BmobUser currentUser] objectForKey:@"isTeacher"] isEqualToString:@"YES"]
 
 #endif /* PrefixHeader_pch */

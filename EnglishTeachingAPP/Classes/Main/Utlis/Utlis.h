@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
+#import "YYTextView.h"
 static AVAudioPlayer *player;
 @interface Utlis : NSObject
 +(BOOL)checkingString:(NSString *)string;
 
 + (void)loginTeacherAccount;
++ (void)faceMappingWithText:(YYTextView *)tv;
 @end

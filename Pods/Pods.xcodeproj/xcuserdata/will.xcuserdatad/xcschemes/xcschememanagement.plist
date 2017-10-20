@@ -29,20 +29,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ZYSuspensionView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>038E790C5FFFFEF29E25EA1A3114F591</key>
+		<key>2D779D24573B02CFE3CF5FF4F19DFCFD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1C07DC477BF63CE91308B61DD49E0453</key>
+		<key>645D9DD0B9235FC58C03569F8ACAD933</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>74EEA21057E9CB88206FA7663F12A1AF</key>
+		<key>95414EAA33BA32DB4D2B87FC6B530B77</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AEEA3B1FAE1F542B0E8F64EA943DD027</key>
+		<key>A0B3E3BFCE4969E68030217A07C60307</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EF9F0599B9E26DBE050BC1B071996B38</key>
 		<dict>
 			<key>primary</key>
 			<true/>
