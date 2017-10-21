@@ -28,5 +28,6 @@
 #define KLoadingImage [UIImage imageNamed:@"loadimage"]
 #define KIsTeacher [[[BmobUser currentUser] objectForKey:@"isTeacher"] isEqualToString:@"YES"]
 #define kSpacing 8
+#define kShowError [SVProgressHUD showErrorWithStatus:[error localizedDescription]]
 
 #endif /* PrefixHeader_pch */

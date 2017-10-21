@@ -10,8 +10,9 @@
 #import "YYTextView.h"
 #import "FaceView.h"
 #import "SelectPhotoView.h"
+#import "RecordButton.h"
 
-@interface SendingViewController ()<YYTextViewDelegate, FaceViewDelegate,ZLPhotoActionSheetDelegate,SelectPhotoViewDelegate>
+@interface SendingViewController ()<YYTextViewDelegate, FaceViewDelegate,ZLPhotoActionSheetDelegate,SelectPhotoViewDelegate,RecordButtonDelegate>
 @property (weak, nonatomic) IBOutlet YYTextView *titleTV;
 @property (weak, nonatomic) IBOutlet YYTextView *detailTV;
 @property (weak, nonatomic) IBOutlet UILabel *imageCountLabel;
@@ -23,12 +24,34 @@
 @property (nonatomic, strong) NSMutableArray<ZLSelectPhotoModel *> *lastSelectMoldels;
 @property (nonatomic, strong) NSMutableArray *selectPhotos;
 @property (nonatomic, strong)SelectPhotoView *selectPhotoView;
-
+//录音按钮
+@property (nonatomic, strong)UIView *recordView;
+@property (nonatomic, strong)UILabel *recordTimeLabel;
+@property (nonatomic, strong)NSData *recordData;
 @end
 
 @implementation SendingViewController
 - (void)textViewDidBeginEditing:(YYTextView *)textView{
     self.currentTV = textView;
+}
+
+#pragma mark - Lazyloading
+- (UIView *)recordView{
+    if (!_recordView) {
+        _recordView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, KSW, 180)];
+        self.recordTimeLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 160, KSW, 20)];
+        self.recordTimeLabel.textAlignment = NSTextAlignmentCenter;
+        self.recordTimeLabel.textColor = [UIColor grayColor];
+        [self.recordView addSubview:self.recordTimeLabel];
+        
+        //录音按钮添加到
+        RecordButton *recordBtn = [[RecordButton alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+        recordBtn.delegate = self;
+        recordBtn.center = CGPointMake(KSW/2, 180/2);
+        [self.recordView addSubview:recordBtn];
+        
+    }
+    return _recordView;
 }
 
 - (FaceView *)faceView{
@@ -74,6 +97,14 @@
                 [self showSelectSheet];
             }
             
+        }
+            
+            break;
+            
+        case 2:
+        {
+            self.currentTV.inputView = self.currentTV.inputView?nil:self.recordView;
+            [self.currentTV reloadInputViews];
         }
             
             break;
@@ -125,7 +156,112 @@
 }
 
 - (void)sendAction{
+    if (![Utlis checkingString:self.detailTV.text]) {
+        [SVProgressHUD showErrorWithStatus:@"请输入详情内容"];
+        return;
+    }
     
+    BmobObject *bObj = [BmobObject objectWithClassName:@"Message"];
+    [bObj setObject:self.detailTV.text forKey:@"detail"];
+    //判断是否有title
+    if (self.titleTV.text.length>0) {
+        [bObj setObject:self.titleTV.text forKey:@"title"];
+    }
+    //设置谁发送的
+    [bObj setObject:[BmobUser currentUser] forKey:@"user"];
+    [SVProgressHUD show];
+    
+    [bObj saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+        [SVProgressHUD dismiss];
+        if (isSuccessful) {
+            //判断是否有图片
+            if (self.selectPhotos.count>0) {
+                [self sendImagesWithBmobObject:bObj];
+            }else if(self.recordData){
+                
+                [self sendAudioWithBmobObject:bObj];
+                
+            }else{//无音频 无图片
+                [self sendFinishAction];
+            }
+
+        }else{
+            kShowError;
+        }
+    }];
+}
+
+- (void)sendImagesWithBmobObject:(BmobObject *)bObj{
+    NSMutableArray *images = [NSMutableArray array];
+    for (UIImage *image in self.selectPhotos) {
+        NSData *imageData = UIImageJPEGRepresentation(image, .3);
+        NSDictionary *imageDic = @{@"filename":@"a.jpg",@"data":imageData};
+        [images addObject:imageDic];
+    }
+    [SVProgressHUD showProgress:0 status:@"开始上传图片"];
+    //文件批量上传
+    [BmobFile filesUploadBatchWithDataArray:images progressBlock:^(int index, float progress) {
+        [SVProgressHUD showProgress:progress status:[NSString stringWithFormat:@"正在上传%ld-%d", images.count, index+1]];
+    } resultBlock:^(NSArray *array, BOOL isSuccessful, NSError *error) {
+        [SVProgressHUD dismiss];
+        if (isSuccessful) {
+            NSLog(@"%@", array);
+            NSMutableArray *imageUrls = [NSMutableArray array];
+            for (BmobFile *file in array) {
+                [imageUrls addObject:file.url];
+            }
+            //把图片数组和message对象关联
+            [bObj setObject:imageUrls forKey:@"imagePaths"];
+            
+            [bObj updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+               
+                if (isSuccessful) {
+                    //判断是否有音频数据
+                    if (self.recordData) {
+                        //保存音频数据
+                        [self sendAudioWithBmobObject:bObj];
+                    }else{
+                        [self sendFinishAction];
+                    }
+                }
+                
+            }];
+            
+        }else{
+            kShowError;
+        }
+    }];
+}
+
+- (void)sendAudioWithBmobObject:(BmobObject *)bObj{
+    
+    BmobFile *file = [[BmobFile alloc]initWithFileName:@"a.amr" withFileData:self.recordData];
+    [SVProgressHUD showWithStatus:@"开始上传音频数据"];
+    [file saveInBackground:^(BOOL isSuccessful, NSError *error) {
+        [SVProgressHUD dismiss];
+        if (isSuccessful) {
+            //保存音频文件的地址到Message表中
+            [bObj setObject:file.url forKey:@"audioPath"];
+            [bObj updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+                if (isSuccessful) {
+                    [self sendFinishAction];
+                }else{
+                    kShowError;
+                }
+            }];
+        }else{
+            kShowError;
+        }
+        
+        
+    } withProgressBlock:^(CGFloat progress) {
+        [SVProgressHUD showProgress:progress status:@"正在上传音频数据"];
+    }];
+    
+}
+
+- (void)sendFinishAction{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)showSelectSheet{
@@ -181,6 +317,12 @@
 #pragma mark 选择图片框架协议方法
 -(void)selectImageCancelAction{
     [self.currentTV becomeFirstResponder];
+}
+
+#pragma mark - RecordButtonDelegate协议方法
+- (void)didFinishRecordAction:(NSData *)audioData andTime:(float)time{
+    self.recordTimeLabel.text = [NSString stringWithFormat:@"%.2f秒",time];
+    self.recordData = audioData;
 }
 
 /*

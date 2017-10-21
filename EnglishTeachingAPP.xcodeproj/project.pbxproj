@@ -78,6 +78,16 @@
 		BE2B0ECE1F99F2B800CE0EBE /* ZLSelectPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2B0EAB1F99F2B800CE0EBE /* ZLSelectPhotoModel.m */; };
 		BE2B0ECF1F99F2B800CE0EBE /* ZLShowBigImgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2B0EAD1F99F2B800CE0EBE /* ZLShowBigImgViewController.m */; };
 		BE2B0ED01F99F2B800CE0EBE /* ZLThumbnailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2B0EAF1F99F2B800CE0EBE /* ZLThumbnailViewController.m */; };
+		BE2B0EE91F9B302A00CE0EBE /* amrFileCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2B0ED41F9B302A00CE0EBE /* amrFileCodec.m */; };
+		BE2B0EEA1F9B302A00CE0EBE /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2B0EDD1F9B302A00CE0EBE /* libopencore-amrnb.a */; };
+		BE2B0EEB1F9B302A00CE0EBE /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2B0EDE1F9B302A00CE0EBE /* libopencore-amrwb.a */; };
+		BE2B0EEC1F9B302A00CE0EBE /* black_bg_ip5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE2B0EDF1F9B302A00CE0EBE /* black_bg_ip5@2x.png */; };
+		BE2B0EED1F9B302A00CE0EBE /* LCVoice.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2B0EE11F9B302A00CE0EBE /* LCVoice.m */; };
+		BE2B0EEE1F9B302A00CE0EBE /* LCVoiceHud.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2B0EE31F9B302A00CE0EBE /* LCVoiceHud.m */; };
+		BE2B0EEF1F9B302A00CE0EBE /* mic_normal_358x358@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE2B0EE41F9B302A00CE0EBE /* mic_normal_358x358@2x.png */; };
+		BE2B0EF01F9B302A00CE0EBE /* mic_talk_358x358@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE2B0EE51F9B302A00CE0EBE /* mic_talk_358x358@2x.png */; };
+		BE2B0EF11F9B302A00CE0EBE /* RecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2B0EE71F9B302A00CE0EBE /* RecordButton.m */; };
+		BE2B0EF21F9B302A00CE0EBE /* wave70x117@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE2B0EE81F9B302A00CE0EBE /* wave70x117@2x.png */; };
 		BED6A80D1F90B5AB00FA0C62 /* RNFrostedSidebar.m in Sources */ = {isa = PBXBuildFile; fileRef = BED6A80C1F90B5AB00FA0C62 /* RNFrostedSidebar.m */; };
 		BED6A8111F935FB300FA0C62 /* RegistrationStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED6A80F1F935FB300FA0C62 /* RegistrationStudentViewController.m */; };
 		BED6A8121F935FB300FA0C62 /* RegistrationStudentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BED6A8101F935FB300FA0C62 /* RegistrationStudentViewController.xib */; };
@@ -327,6 +337,24 @@
 		BE2B0EAD1F99F2B800CE0EBE /* ZLShowBigImgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLShowBigImgViewController.m; sourceTree = "<group>"; };
 		BE2B0EAE1F99F2B800CE0EBE /* ZLThumbnailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLThumbnailViewController.h; sourceTree = "<group>"; };
 		BE2B0EAF1F99F2B800CE0EBE /* ZLThumbnailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLThumbnailViewController.m; sourceTree = "<group>"; };
+		BE2B0ED31F9B302A00CE0EBE /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		BE2B0ED41F9B302A00CE0EBE /* amrFileCodec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = amrFileCodec.m; sourceTree = "<group>"; };
+		BE2B0ED71F9B302A00CE0EBE /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		BE2B0ED81F9B302A00CE0EBE /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		BE2B0EDA1F9B302A00CE0EBE /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		BE2B0EDB1F9B302A00CE0EBE /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		BE2B0EDD1F9B302A00CE0EBE /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		BE2B0EDE1F9B302A00CE0EBE /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		BE2B0EDF1F9B302A00CE0EBE /* black_bg_ip5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black_bg_ip5@2x.png"; sourceTree = "<group>"; };
+		BE2B0EE01F9B302A00CE0EBE /* LCVoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCVoice.h; sourceTree = "<group>"; };
+		BE2B0EE11F9B302A00CE0EBE /* LCVoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCVoice.m; sourceTree = "<group>"; };
+		BE2B0EE21F9B302A00CE0EBE /* LCVoiceHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCVoiceHud.h; sourceTree = "<group>"; };
+		BE2B0EE31F9B302A00CE0EBE /* LCVoiceHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCVoiceHud.m; sourceTree = "<group>"; };
+		BE2B0EE41F9B302A00CE0EBE /* mic_normal_358x358@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mic_normal_358x358@2x.png"; sourceTree = "<group>"; };
+		BE2B0EE51F9B302A00CE0EBE /* mic_talk_358x358@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mic_talk_358x358@2x.png"; sourceTree = "<group>"; };
+		BE2B0EE61F9B302A00CE0EBE /* RecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordButton.h; sourceTree = "<group>"; };
+		BE2B0EE71F9B302A00CE0EBE /* RecordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordButton.m; sourceTree = "<group>"; };
+		BE2B0EE81F9B302A00CE0EBE /* wave70x117@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wave70x117@2x.png"; sourceTree = "<group>"; };
 		BED6A80B1F90B5AB00FA0C62 /* RNFrostedSidebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNFrostedSidebar.h; sourceTree = "<group>"; };
 		BED6A80C1F90B5AB00FA0C62 /* RNFrostedSidebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNFrostedSidebar.m; sourceTree = "<group>"; };
 		BED6A80E1F935FB300FA0C62 /* RegistrationStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationStudentViewController.h; sourceTree = "<group>"; };
@@ -504,6 +532,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BED6A8171F95E14200FA0C62 /* AVFoundation.framework in Frameworks */,
+				BE2B0EEA1F9B302A00CE0EBE /* libopencore-amrnb.a in Frameworks */,
+				BE2B0EEB1F9B302A00CE0EBE /* libopencore-amrwb.a in Frameworks */,
 				531D547061FFB62E38DA052B /* libPods-EnglishTeachingAPP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,6 +605,7 @@
 		BE1D19141F8F101500B4ABC4 /* 3rdFrame */ = {
 			isa = PBXGroup;
 			children = (
+				BE2B0ED11F9B302A00CE0EBE /* LCVoiceHud */,
 				BE2B0E801F99F2B800CE0EBE /* PhotoBrowser */,
 				BED6AA3F1F99D13500FA0C62 /* YYText */,
 				BED6A80B1F90B5AB00FA0C62 /* RNFrostedSidebar.h */,
@@ -1122,6 +1153,71 @@
 			path = resource;
 			sourceTree = "<group>";
 		};
+		BE2B0ED11F9B302A00CE0EBE /* LCVoiceHud */ = {
+			isa = PBXGroup;
+			children = (
+				BE2B0ED21F9B302A00CE0EBE /* arm */,
+				BE2B0EDF1F9B302A00CE0EBE /* black_bg_ip5@2x.png */,
+				BE2B0EE01F9B302A00CE0EBE /* LCVoice.h */,
+				BE2B0EE11F9B302A00CE0EBE /* LCVoice.m */,
+				BE2B0EE21F9B302A00CE0EBE /* LCVoiceHud.h */,
+				BE2B0EE31F9B302A00CE0EBE /* LCVoiceHud.m */,
+				BE2B0EE41F9B302A00CE0EBE /* mic_normal_358x358@2x.png */,
+				BE2B0EE51F9B302A00CE0EBE /* mic_talk_358x358@2x.png */,
+				BE2B0EE61F9B302A00CE0EBE /* RecordButton.h */,
+				BE2B0EE71F9B302A00CE0EBE /* RecordButton.m */,
+				BE2B0EE81F9B302A00CE0EBE /* wave70x117@2x.png */,
+			);
+			path = LCVoiceHud;
+			sourceTree = "<group>";
+		};
+		BE2B0ED21F9B302A00CE0EBE /* arm */ = {
+			isa = PBXGroup;
+			children = (
+				BE2B0ED31F9B302A00CE0EBE /* amrFileCodec.h */,
+				BE2B0ED41F9B302A00CE0EBE /* amrFileCodec.m */,
+				BE2B0ED51F9B302A00CE0EBE /* include */,
+				BE2B0EDC1F9B302A00CE0EBE /* lib */,
+			);
+			path = arm;
+			sourceTree = "<group>";
+		};
+		BE2B0ED51F9B302A00CE0EBE /* include */ = {
+			isa = PBXGroup;
+			children = (
+				BE2B0ED61F9B302A00CE0EBE /* opencore-amrnb */,
+				BE2B0ED91F9B302A00CE0EBE /* opencore-amrwb */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		BE2B0ED61F9B302A00CE0EBE /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				BE2B0ED71F9B302A00CE0EBE /* interf_dec.h */,
+				BE2B0ED81F9B302A00CE0EBE /* interf_enc.h */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		BE2B0ED91F9B302A00CE0EBE /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				BE2B0EDA1F9B302A00CE0EBE /* dec_if.h */,
+				BE2B0EDB1F9B302A00CE0EBE /* if_rom.h */,
+			);
+			path = "opencore-amrwb";
+			sourceTree = "<group>";
+		};
+		BE2B0EDC1F9B302A00CE0EBE /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				BE2B0EDD1F9B302A00CE0EBE /* libopencore-amrnb.a */,
+				BE2B0EDE1F9B302A00CE0EBE /* libopencore-amrwb.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		BED6A8231F98837900FA0C62 /* Sending */ = {
 			isa = PBXGroup;
 			children = (
@@ -1428,6 +1524,7 @@
 				BED6A96D1F99A25300FA0C62 /* d_ganmao@2x.png in Resources */,
 				BED6A98F1F99A25300FA0C62 /* d_wabishi@2x.png in Resources */,
 				BE2B0EB81F99F2B800CE0EBE /* btn_selected@3x.png in Resources */,
+				BE2B0EEF1F9B302A00CE0EBE /* mic_normal_358x358@2x.png in Resources */,
 				BE2B0EBE1F99F2B800CE0EBE /* navBackBtn@2x.png in Resources */,
 				BED6A9791F99A25300FA0C62 /* d_ku@2x.png in Resources */,
 				BED6A9B11F99A25300FA0C62 /* o_fahongbao@2x.png in Resources */,
@@ -1436,6 +1533,7 @@
 				BE2B0EC21F99F2B800CE0EBE /* ZLPhotoBrowser.bundle in Resources */,
 				BE2B0EB11F99F2B800CE0EBE /* btn_circle@2x.png in Resources */,
 				BE2B0EBF1F99F2B800CE0EBE /* ZLCollectionCell.xib in Resources */,
+				BE2B0EEC1F9B302A00CE0EBE /* black_bg_ip5@2x.png in Resources */,
 				BED6A9701F99A25300FA0C62 /* d_haixiu@2x.png in Resources */,
 				BED6A97E1F99A25300FA0C62 /* d_nanhaier@2x.png in Resources */,
 				BED6A9761F99A25300FA0C62 /* d_jiyan@2x.png in Resources */,
@@ -1501,6 +1599,7 @@
 				BED6A9A71F99A25300FA0C62 /* h_good@2x.png in Resources */,
 				BED6A9C01F99A25300FA0C62 /* w_weifeng@2x.png in Resources */,
 				BED6A97B1F99A25300FA0C62 /* d_landelini@2x.png in Resources */,
+				BE2B0EF01F9B302A00CE0EBE /* mic_talk_358x358@2x.png in Resources */,
 				BED6A9611F99A25300FA0C62 /* d_aoteman@2x.png in Resources */,
 				BED6A9971F99A25300FA0C62 /* d_yun@2x.png in Resources */,
 				BED6A9631F99A25300FA0C62 /* d_beishang@2x.png in Resources */,
@@ -1542,6 +1641,7 @@
 				BE2B0EBB1F99F2B800CE0EBE /* btn_unselected@3x.png in Resources */,
 				BED6A9671F99A25300FA0C62 /* d_chijing@2x.png in Resources */,
 				BED6A9871F99A25300FA0C62 /* d_shuai@2x.png in Resources */,
+				BE2B0EF21F9B302A00CE0EBE /* wave70x117@2x.png in Resources */,
 				BE1D19721F8F487600B4ABC4 /* MessageTableViewController.xib in Resources */,
 				BED6A82B1F98838C00FA0C62 /* SendingViewController.xib in Resources */,
 				BED6A9731F99A25300FA0C62 /* d_heixian@2x.png in Resources */,
@@ -1621,6 +1721,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2B0EF11F9B302A00CE0EBE /* RecordButton.m in Sources */,
 				BED6A8221F98510400FA0C62 /* BmobObject+Dictionary.m in Sources */,
 				BED6AA8B1F99D13500FA0C62 /* YYTextView.m in Sources */,
 				BED6AA7D1F99D13500FA0C62 /* YYTextArchiver.m in Sources */,
@@ -1630,6 +1731,7 @@
 				BED6AA7F1F99D13500FA0C62 /* YYTextParser.m in Sources */,
 				BED6A87B1F999D9500FA0C62 /* FaceView.m in Sources */,
 				BED6AA7C1F99D13500FA0C62 /* YYTextSelectionView.m in Sources */,
+				BE2B0EEE1F9B302A00CE0EBE /* LCVoiceHud.m in Sources */,
 				BE1D19711F8F487600B4ABC4 /* MessageTableViewController.m in Sources */,
 				BED6AA7E1F99D13500FA0C62 /* YYTextAttribute.m in Sources */,
 				BE1D193E1F8F111400B4ABC4 /* MainTabbarController.m in Sources */,
@@ -1637,6 +1739,7 @@
 				BE1D198A1F8F490400B4ABC4 /* StudentTableViewController.m in Sources */,
 				BE2B0EC71F99F2B800CE0EBE /* ZLCollectionCell.m in Sources */,
 				BE2B0ECA1F99F2B800CE0EBE /* ZLPhotoBrowser.m in Sources */,
+				BE2B0EE91F9B302A00CE0EBE /* amrFileCodec.m in Sources */,
 				BE1D19A21F8F5C5900B4ABC4 /* RegistrationViewController.m in Sources */,
 				BE1D19B71F90663A00B4ABC4 /* MainTableViewController.m in Sources */,
 				BED6AA7A1F99D13500FA0C62 /* YYTextLine.m in Sources */,
@@ -1665,6 +1768,7 @@
 				BED6AA861F99D13500FA0C62 /* YYTextAsyncLayer.m in Sources */,
 				BE1D19801F8F48D700B4ABC4 /* GroupsTableViewController.m in Sources */,
 				BE2B0ECC1F99F2B800CE0EBE /* ZLPhotoTool.m in Sources */,
+				BE2B0EED1F9B302A00CE0EBE /* LCVoice.m in Sources */,
 				BE2B0EC81F99F2B800CE0EBE /* ZLNoAuthorityViewController.m in Sources */,
 				BED6AA851F99D13500FA0C62 /* UIView+YYText.m in Sources */,
 				BED6AA811F99D13500FA0C62 /* YYTextRunDelegate.m in Sources */,
@@ -1815,6 +1919,10 @@
 				INFOPLIST_FILE = EnglishTeachingAPP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EnglishTeachingAPP/3rdFrame/LCVoiceHud/arm/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.will.EnglishTeachingAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1831,6 +1939,10 @@
 				INFOPLIST_FILE = EnglishTeachingAPP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EnglishTeachingAPP/3rdFrame/LCVoiceHud/arm/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.will.EnglishTeachingAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

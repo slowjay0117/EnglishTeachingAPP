@@ -152,6 +152,8 @@ typedef void (^handler)(NSArray<UIImage *> *selectPhotos, NSArray<ZLSelectPhotoM
 
 - (void)hide
 {
+    [self.delegate selectImageCancelAction];
+    
     if (self.animate) {
         CGPoint fromPoint = self.baseView.layer.position;
         CGPoint toPoint   = CGPointMake(fromPoint.x, fromPoint.y+kBaseViewHeight);
@@ -240,8 +242,7 @@ typedef void (^handler)(NSArray<UIImage *> *selectPhotos, NSArray<ZLSelectPhotoM
     [self.arraySelectPhotos removeAllObjects];
     [self hide];
     NSLog(@"取消");
-    
-    [self.delegate selectImageCancelAction];
+
 }
 
 - (void)cell_btn_Click:(UIButton *)btn
